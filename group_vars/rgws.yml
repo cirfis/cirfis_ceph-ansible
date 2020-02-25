@@ -51,9 +51,9 @@ rgw_create_pools:
     type: ec
     ec_profile: myecprofile
     ec_k: 5
-   ec_m: 3
+    ec_m: 3
   "{{ rgw_zone }}.rgw.buckets.index":
-   pg_num: 16
+    pg_num: 16
     size: 3
     type: replicated
   "{{ rgw_zone }}.rgw.meta":

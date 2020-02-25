@@ -372,8 +372,7 @@ public_network: 10.0.0.1/24
 #osd_mount_options_xfs: noatime,largeio,inode64,swalloc
 osd_objectstore: bluestore
 #osd_pool_default_pg_num:
-osd_pool_default_size: 2
-osd_pool_default_min_size: 1
+
 
 # Any device containing these patterns in their path will be excluded.
 #osd_auto_discovery_exclude: "dm-*|loop*|md*|rbd*"
@@ -542,8 +541,22 @@ email_address: cirfis@gmail.com
 #     bar: 5678
 #   "client.rgw.{{ hostvars[groups.get(rgw_group_name)[0]]['ansible_hostname'] }}":
 #     rgw_zone: zone1
-#
-#ceph_conf_overrides: {}
+
+ceph_conf_overrides:
+  global:
+    public_network: 10.0.0.1/24
+    cluster_network: 10.0.0.1/24
+  mon:
+    mon_osd_full_ratio: "0.9"
+    mon_osd_nearfull_ratio: "0.8"
+  mds:
+    mds_standby_replay: true
+    mds_log_skip_corrupt_events: true
+    mds_cache_reservation: ".04"
+    mds_replay_interval: 2
+  osd:
+    osd_pool_default_size: 2
+    osd_pool_default_min_size: 1
 
 
 #############
