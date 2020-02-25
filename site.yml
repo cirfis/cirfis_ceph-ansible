@@ -9,9 +9,9 @@
   - rgws
   - nfss
   - clients
-#  - iscsigws
-  - grafana-server
+  - grafanaServer
   - rgwloadbalancers
+#  - iscsigws
 
   gather_facts: false
   any_errors_fatal: true
