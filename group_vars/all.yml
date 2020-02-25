@@ -69,7 +69,7 @@ grafana_server_group_name: grafanaServer
 #ceph_rgwloadbalancer_firewall_zone: public
 
 # Generate local ceph.conf in fetch directory
-#ceph_conf_local: false
+ceph_conf_local: true
 
 ############
 # PACKAGES #
@@ -138,7 +138,6 @@ ceph_repository: community
 #
 ceph_mirror: http://download.ceph.com
 ceph_stable_key: https://download.ceph.com/keys/release.asc
-#ceph_stable_release: dummy
 #ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
 
 #nfs_ganesha_stable: true # use stable repos for nfs-ganesha
@@ -411,7 +410,7 @@ mds_max_mds: 2
 # These variables must be defined at least in all.yml and overrided if needed (inventory host file or group_vars/*.yml).
 # Eg. If you want to specify for each radosgw node which address the radosgw will bind to you can set it in your **inventory host file** by using 'radosgw_address' variable.
 # Preference will go to radosgw_address if both radosgw_address and radosgw_interface are defined.
-radosgw_interface: eth0
+#radosgw_interface: eth0
 #radosgw_address: x.x.x.x
 radosgw_address_block: 10.0.0.1/24
 #radosgw_keystone_ssl: false # activate this when using keystone PKI keys
@@ -480,9 +479,9 @@ email_address: cirfis@gmail.com
 # NFS role to be useful
 #
 # Set this to true to enable File access via NFS.  Requires an MDS role.
-#nfs_file_gw: false
+nfs_file_gw: True
 # Set this to true to enable Object access via NFS. Requires an RGW role.
-#nfs_obj_gw: "{{ False if groups.get(mon_group_name, []) | length == 0 else True }}"
+nfs_obj_gw: "{{ False if groups.get(mon_group_name, []) | length == 0 else True }}"
 
 
 #############
@@ -543,9 +542,6 @@ email_address: cirfis@gmail.com
 #     rgw_zone: zone1
 
 ceph_conf_overrides:
-  global:
-    public_network: 10.0.0.1/24
-    cluster_network: 10.0.0.1/24
   mon:
     mon_osd_full_ratio: "0.9"
     mon_osd_nearfull_ratio: "0.8"
@@ -564,11 +560,11 @@ ceph_conf_overrides:
 #############
 
 #disable_transparent_hugepage: "{{ false if osd_objectstore == 'bluestore' else true }}"
-#os_tuning_params:
-#  - { name: fs.file-max, value: 26234859 }
-#  - { name: vm.zone_reclaim_mode, value: 0 }
-#  - { name: vm.swappiness, value: 10 }
-#  - { name: vm.min_free_kbytes, value: "{{ vm_min_free_kbytes }}" }
+os_tuning_params:
+  - { name: fs.file-max, value: 26234859 }
+  - { name: vm.zone_reclaim_mode, value: 0 }
+  - { name: vm.swappiness, value: 10 }
+  - { name: vm.min_free_kbytes, value: "{{ vm_min_free_kbytes }}" }
 
 # For Debian & Red Hat/CentOS installs set TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES
 # Set this to a byte value (e.g. 134217728)

@@ -28,8 +28,8 @@ copy_admin_key: True
 # All scenario(except 3rd) inherit from the following device declaration
 # Note: This scenario uses the ceph-volume lvm batch method to provision OSDs
 
-devices:
-  - ceph/osd1
+#devices:
+#  - /dev/ceph/osd1
 #  - ceph/osd2
 
 # Declare devices to be used as block.db devices
@@ -59,7 +59,7 @@ osd_auto_discovery: false
 
 # Encrypt your OSD device using dmcrypt
 # If set to True, no matter which osd_objecstore you use the data will be encrypted
-dmcrypt: False
+#dmcrypt: False
 
 # Use ceph-volume to create OSDs from logical volumes.
 # lvm_volumes is a list of dictionaries.
@@ -111,7 +111,7 @@ dmcrypt: False
 #     data_vg: vg4
 #   - data: /dev/sda
 #   - data: /dev/sdb1
-
+osd_objectstore: bluestore
 lvm_volumes:
   - data: osd1
     data_vg: ceph
