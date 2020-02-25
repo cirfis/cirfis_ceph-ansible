@@ -254,7 +254,8 @@ nfs_ganesha_flavor: "ceph_master"
 # false, you *must* generate `fsid` in another way.
 # ACTIVATE THE FSID VARIABLE FOR NON-VAGRANT DEPLOYMENT
 #fsid: "{{ cluster_uuid.stdout }}"
-#generate_fsid: true
+fsid: "eec477af-996b-4197-9e46-34f3624963dc"
+generate_fsid: false
 
 #ceph_conf_key_directory: /etc/ceph
 

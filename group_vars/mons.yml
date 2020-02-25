@@ -6,10 +6,10 @@
 ###########
 # GENERAL #
 ###########
-#mon_group_name: mons
+mon_group_name: mons
 
 # ACTIVATE BOTH FSID AND MONITOR_SECRET VARIABLES FOR NON-VAGRANT DEPLOYMENT
-monitor_secret: "{{ monitor_keyring.stdout }}"
+monitor_secret: "AQAYY1FeyYlMAxAA/Rv5PRV2rHa2GqUZAa2iBA=="
 admin_secret: 'sssh!'
 
 # Secure your cluster
