@@ -48,7 +48,7 @@
 #mgr_group_name: mgrs
 #client_group_name: clients
 #rgwloadbalancer_group_name: rgwloadbalancers
-grafana_server_group_name: grafanaServer
+#grafana_server_group_name: grafanaServer
 #iscsi_gw_group_name: iscsigws
 
 # If configure_firewall is true, then ansible will try to configure the
@@ -331,18 +331,18 @@ mon_host_v2:
 ##########
 cephfs: cephfs # name of the ceph filesystem
 cephfs_data_pool:
-#  name: "{{ cephfs_data if cephfs_data is defined else 'cephfs_data' }}"
+   name: "{{ cephfs_data if cephfs_data is defined else 'cephfs_data' }}"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
 #  pgp_num: "{{ osd_pool_default_pg_num }}"
-   rule_name: "ec_rule"
+#   rule_name: "erasure_rule"
 #  type: 1
    erasure_profile: "myecprofile"
-#  expected_num_objects: ""
+#     expected_num_objects: ""
 #  application: "cephfs"
 #  size: "{{ osd_pool_default_size }}"
 #  min_size: "{{ osd_pool_default_min_size }}"
-#cephfs_metadata_pool:
-#  name: "{{ cephfs_metadata if cephfs_metadata is defined else 'cephfs_metadata' }}"
+cephfs_metadata_pool:
+  name: "{{ cephfs_metadata if cephfs_metadata is defined else 'cephfs_metadata' }}"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
 #  pgp_num: "{{ osd_pool_default_pg_num }}"
 #  rule_name: "replicated_rule"
@@ -545,6 +545,7 @@ ceph_conf_overrides:
   mon:
     mon_osd_full_ratio: "0.9"
     mon_osd_nearfull_ratio: "0.8"
+    mon_allow_pool_delete: true
   mds:
     mds_standby_replay: true
     mds_log_skip_corrupt_events: true
@@ -718,7 +719,7 @@ dashboard_protocol: http
 dashboard_port: 8023
 dashboard_admin_user: admin
 # This variable must be set with a strong custom password when dashboard_enabled is True
-dashboard_admin_password: 8Drag0n4
+dashboard_admin_password: e8J2bdkUFEqec
 # We only need this for SSL (https) connections
 #dashboard_crt: ''
 #dashboard_key: ''
@@ -736,7 +737,7 @@ grafana_admin_password: 8Drag0n4
 #grafana_key: ''
 #grafana_container_image: "grafana/grafana:5.2.4"
 #grafana_container_cpu_period: 100000
-grafana_container_cpu_cores: 2
+grafana_container_cpu_cores: 3
 # container_memory is in GB
 grafana_container_memory: 3
 #grafana_uid: 472
@@ -762,16 +763,16 @@ grafana_container_memory: 3
 #grafana_port: 3000
 #prometheus_container_image: "prom/prometheus:v2.7.2"
 #prometheus_container_cpu_period: 100000
-prometheus_container_cpu_cores: 2
+prometheus_container_cpu_cores: 3
 # container_memory is in GB
-#prometheus_container_memory: 3
+prometheus_container_memory: 3
 #prometheus_data_dir: /var/lib/prometheus
 #prometheus_conf_dir: /etc/prometheus
 #prometheus_user_id: '65534'  # This is the UID used by the prom/prometheus container image
 #prometheus_port: 9092
 #alertmanager_container_image: "prom/alertmanager:v0.16.2"
 #alertmanager_container_cpu_period: 100000
-alertmanager_container_cpu_cores: 1
+alertmanager_container_cpu_cores: 2
 # container_memory is in GB
 alertmanager_container_memory: 2
 #alertmanager_data_dir: /var/lib/alertmanager

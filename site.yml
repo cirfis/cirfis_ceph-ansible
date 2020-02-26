@@ -5,13 +5,15 @@
   - mons
   - osds
   - mdss
-  - mgrs
   - rgws
   - nfss
+  - rbdmirrors
   - clients
-  - grafanaServer
+  - mgrs
+  - iscsigws
+  - iscsi-gws # for backward compatibility only!
+  - grafana-server
   - rgwloadbalancers
-#  - iscsigws
 
   gather_facts: false
   any_errors_fatal: true
@@ -23,6 +25,11 @@
     delegate_facts_host: True
 
   pre_tasks:
+    # If we can't get python2 installed before any module is used we will fail
+    # so just try what we can to get it installed
+
+    - import_tasks: raw_install_python.yml
+
     - name: gather facts
       setup:
       when:
@@ -279,6 +286,44 @@
             status: "Complete"
             end: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
 
+- hosts: rbdmirrors
+  gather_facts: false
+  become: True
+  any_errors_fatal: true
+  pre_tasks:
+    - name: set ceph rbd mirror install 'In Progress'
+      run_once: true
+      set_stats:
+        data:
+          installer_phase_ceph_rbdmirror:
+            status: "In Progress"
+            start: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
+
+  tasks:
+    - import_role:
+        name: ceph-defaults
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-facts
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-handler
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-config
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-rbd-mirror
+
+  post_tasks:
+    - name: set ceph rbd mirror install 'Complete'
+      run_once: true
+      set_stats:
+        data:
+          installer_phase_ceph_rbdmirror:
+            status: "Complete"
+            end: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
+
 - hosts: clients
   gather_facts: false
   become: True
@@ -314,6 +359,46 @@
       set_stats:
         data:
           installer_phase_ceph_client:
+            status: "Complete"
+            end: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
+
+- hosts:
+    - iscsigws
+    - iscsi-gws # for backward compatibility only!
+  gather_facts: false
+  become: True
+  any_errors_fatal: true
+  pre_tasks:
+    - name: set ceph iscsi gateway install 'In Progress'
+      run_once: true
+      set_stats:
+        data:
+          installer_phase_ceph_iscsi_gw:
+            status: "In Progress"
+            start: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
+
+  tasks:
+    - import_role:
+        name: ceph-defaults
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-facts
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-handler
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-config
+      tags: ['ceph_update_config']
+    - import_role:
+        name: ceph-iscsi-gw
+
+  post_tasks:
+    - name: set ceph iscsi gw install 'Complete'
+      run_once: true
+      set_stats:
+        data:
+          installer_phase_ceph_iscsi_gw:
             status: "Complete"
             end: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
 
@@ -354,45 +439,6 @@
   when:
     - dashboard_enabled | bool
     - groups.get(grafana_server_group_name, []) | length > 0
-
-#- hosts:
-#    - iscsigws
-#  gather_facts: false
-#  become: True
-#  any_errors_fatal: true
-#  pre_tasks:
-#    - name: set ceph iscsi gateway install 'In Progress'
-#      run_once: true
-#      set_stats:
-#        data:
-#          installer_phase_ceph_iscsi_gw:
-#            status: "In Progress"
-#            start: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
-
-  #tasks:
-  #  - import_role:
-  #      name: ceph-defaults
-  #    tags: ['ceph_update_config']
-  #  - import_role:
-  #      name: ceph-facts
-  #    tags: ['ceph_update_config']
-  #  - import_role:
-  #      name: ceph-handler
-  #    tags: ['ceph_update_config']
-  #  - import_role:
-  #      name: ceph-config
-  #    tags: ['ceph_update_config']
-  #  - import_role:
-  #      name: ceph-iscsi-gw
-
-  #post_tasks:
-  #  - name: set ceph iscsi gw install 'Complete'
-  #    run_once: true
-  #    set_stats:
-  #      data:
-  #        installer_phase_ceph_iscsi_gw:
-  #          status: "Complete"
-  #          end: "{{ lookup('pipe', 'date +%Y%m%d%H%M%SZ') }}"
 
 - hosts: mons
   gather_facts: false
