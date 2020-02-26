@@ -20,7 +20,7 @@ cirfis:
 # rule_name: "replicated_rule"
 #  application: "rbd"
 #  type: 1
-  erasure_profile: "default"
+  erasure_profile: "myecprofile"
 #  expected_num_objects: ""
 #  size: "{{ osd_pool_default_size }}"
 #  min_size: "{{ osd_pool_default_min_size }}"

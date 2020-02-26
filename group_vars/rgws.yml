@@ -50,8 +50,8 @@ rgw_create_pools:
     pg_num: 64
     type: ec
     ec_profile: myecprofile
-    ec_k: 5
-    ec_m: 3
+    ec_k: 4
+    ec_m: 2
   "{{ rgw_zone }}.rgw.buckets.index":
     pg_num: 16
     size: 3
