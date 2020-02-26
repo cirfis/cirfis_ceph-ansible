@@ -22,11 +22,11 @@
 #  luminous: 12
 #  mimic: 13
 #  nautilus: 14
-#  octopus: 15
+#!!#  octopus: 15
 #  dev: 99
 
 # Directory to fetch cluster fsid, keys etc...
-fetch_directory: ~/ceph
+#!!#fetch_directory: ~/ceph
 
 # The 'cluster' variable determines the name of the cluster.
 # Changing the default value to something else means that you will
@@ -69,7 +69,7 @@ grafana_server_group_name: grafanaServer
 #ceph_rgwloadbalancer_firewall_zone: public
 
 # Generate local ceph.conf in fetch directory
-ceph_conf_local: true
+#ceph_conf_local: true
 
 ############
 # PACKAGES #
@@ -106,8 +106,8 @@ upgrade_ceph_packages: True
 ###########
 # INSTALL #
 ###########
+ceph_stable_release: nautilus
 #ceph_repository_type:
-ceph_stable_release: octopus
 # ORIGIN SOURCE
 #
 # Choose between:
@@ -137,7 +137,7 @@ ceph_repository: community
 # Enabled when ceph_repository == 'community'
 #
 ceph_mirror: http://download.ceph.com
-ceph_stable_key: https://download.ceph.com/keys/release.asc
+#ceph_stable_key: https://download.ceph.com/keys/release.asc
 #ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
 
 #nfs_ganesha_stable: true # use stable repos for nfs-ganesha
@@ -200,14 +200,14 @@ ceph_stable_key: https://download.ceph.com/keys/release.asc
 #
 # Enabled when ceph_repository == 'dev'
 #
-ceph_dev_branch: master # development branch you would like to use e.g: master, wip-hack
+#ceph_dev_branch: master # development branch you would like to use e.g: master, wip-hack
 #ceph_dev_sha1: latest # distinct sha1 to use, defaults to 'latest' (as in latest built)
 
 #nfs_ganesha_dev: false # use development repos for nfs-ganesha
 
 # Set this to choose the version of ceph dev libraries used in the nfs-ganesha packages from shaman
 # flavors so far include: ceph_master, ceph_jewel, ceph_kraken, ceph_luminous
-nfs_ganesha_flavor: "ceph_master"
+#nfs_ganesha_flavor: "ceph_master"
 
 #ceph_iscsi_config_dev: true # special repo for deploying iSCSI gateways
 
@@ -253,7 +253,7 @@ nfs_ganesha_flavor: "ceph_master"
 # false, you *must* generate `fsid` in another way.
 # ACTIVATE THE FSID VARIABLE FOR NON-VAGRANT DEPLOYMENT
 #fsid: "{{ cluster_uuid.stdout }}"
-fsid: "eec477af-996b-4197-9e46-34f3624963dc"
+fsid: "ad395c29-f12d-490b-adcb-65b8f6019a3d"
 generate_fsid: false
 
 #ceph_conf_key_directory: /etc/ceph
@@ -330,13 +330,13 @@ mon_host_v2:
 # CEPHFS #
 ##########
 cephfs: cephfs # name of the ceph filesystem
-#cephfs_data_pool:
+cephfs_data_pool:
 #  name: "{{ cephfs_data if cephfs_data is defined else 'cephfs_data' }}"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
 #  pgp_num: "{{ osd_pool_default_pg_num }}"
-#  rule_name: "replicated_rule"
+   rule_name: "ec_rule"
 #  type: 1
-  erasure_profile: "default"
+   erasure_profile: "myecprofile"
 #  expected_num_objects: ""
 #  application: "cephfs"
 #  size: "{{ osd_pool_default_size }}"
@@ -352,9 +352,9 @@ cephfs: cephfs # name of the ceph filesystem
 #  application: "cephfs"
 #  size: "{{ osd_pool_default_size }}"
 #  min_size: "{{ osd_pool_default_min_size }}"
-#cephfs_pools:
-#  - "{{ cephfs_data_pool }}"
-#  - "{{ cephfs_metadata_pool }}"
+cephfs_pools:
+  - "{{ cephfs_data_pool }}"
+  - "{{ cephfs_metadata_pool }}"
 
 ## OSD options
 #
@@ -481,7 +481,7 @@ email_address: cirfis@gmail.com
 # Set this to true to enable File access via NFS.  Requires an MDS role.
 nfs_file_gw: True
 # Set this to true to enable Object access via NFS. Requires an RGW role.
-nfs_obj_gw: "{{ False if groups.get(mon_group_name, []) | length == 0 else True }}"
+nfs_obj_gw: True
 
 
 #############
@@ -559,12 +559,12 @@ ceph_conf_overrides:
 # OS TUNING #
 #############
 
-#disable_transparent_hugepage: "{{ false if osd_objectstore == 'bluestore' else true }}"
+disable_transparent_hugepage: False
 os_tuning_params:
   - { name: fs.file-max, value: 26234859 }
   - { name: vm.zone_reclaim_mode, value: 0 }
   - { name: vm.swappiness, value: 10 }
-  - { name: vm.min_free_kbytes, value: "{{  }}" }
+  - { name: vm.min_free_kbytes, value: 768000 }
 
 # For Debian & Red Hat/CentOS installs set TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES
 # Set this to a byte value (e.g. 134217728)
@@ -768,7 +768,7 @@ prometheus_container_cpu_cores: 2
 #prometheus_data_dir: /var/lib/prometheus
 #prometheus_conf_dir: /etc/prometheus
 #prometheus_user_id: '65534'  # This is the UID used by the prom/prometheus container image
-prometheus_port: 9092
+#prometheus_port: 9092
 #alertmanager_container_image: "prom/alertmanager:v0.16.2"
 #alertmanager_container_cpu_period: 100000
 alertmanager_container_cpu_cores: 1
