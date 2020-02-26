@@ -106,7 +106,7 @@ upgrade_ceph_packages: True
 ###########
 # INSTALL #
 ###########
-ceph_stable_release: nautilus
+ceph_stable_release: octopus
 #ceph_repository_type:
 # ORIGIN SOURCE
 #
