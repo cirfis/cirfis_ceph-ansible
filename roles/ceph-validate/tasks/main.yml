@@ -1,7 +1,4 @@
 ---
-- name: include check_system.yml
-  include_tasks: check_system.yml
-
 - name: validate repository variables in non-containerized scenario
   when: not containerized_deployment | bool
   block:
@@ -89,6 +86,13 @@
         - item.data is undefined
       with_items: '{{ lvm_volumes }}'
 
+- name: warning deprecation for fqdn configuration
+  fail:
+    msg: "fqdn configuration is not supported anymore. Use 'use_fqdn_yes_i_am_sure: true' if you really want to use it. See release notes for more details"
+  when:
+    - mon_use_fqdn | bool or mds_use_fqdn | bool
+    - not use_fqdn_yes_i_am_sure | bool
+
 - name: debian based systems tasks
   when: ansible_os_family == 'Debian'
   block:
@@ -105,25 +109,6 @@
         - ceph_repository_type == 'cdn'
         - ceph_rhcs_cdn_debian_repo == 'https://customername:customerpasswd@rhcs.download.redhat.com'
         - ceph_repository not in ['rhcs', 'dev', 'obs']
-
-# SUSE/openSUSE Leap only supports the following:
-# - ceph_origin == 'distro'
-# - ceph_origin == 'repository' and ceph_repository == 'obs'
-- name: SUSE/openSUSE Leap based system tasks
-  when: ansible_os_family == 'Suse'
-  block:
-    - name: Check ceph_origin definition on SUSE/openSUSE Leap
-      fail:
-        msg: "Unsupported installation method origin:{{ ceph_origin }}"
-      when: ceph_origin not in ['distro', 'repository']
-
-    - name: Check ceph_repository definition on SUSE/openSUSE Leap
-      fail:
-        msg: "Unsupported installation method origin:{{ ceph_origin }} repo:{{ ceph_repository }}'
-                  only valid combination is ceph_origin == 'repository' and ceph_repository == 'obs'"
-      when:
-        - ceph_origin == 'repository'
-        - ceph_repository != 'obs'
 
 - name: validate ntp daemon type
   fail:
@@ -148,6 +133,9 @@
     - journal_size|int < 5120
     - osd_objectstore == 'filestore'
     - osd_group_name in group_names
+
+- name: include check_system.yml
+  include_tasks: check_system.yml
 
 - name: include check_devices.yml
   include_tasks: check_devices.yml

@@ -9,8 +9,8 @@
 mon_group_name: mons
 
 # ACTIVATE BOTH FSID AND MONITOR_SECRET VARIABLES FOR NON-VAGRANT DEPLOYMENT
-monitor_secret: "AQAYY1FeyYlMAxAA/Rv5PRV2rHa2GqUZAa2iBA=="
-admin_secret: 'sssh!'
+monitor_secret: "cirfis"
+admin_secret: "shhh"
 
 # Secure your cluster
 # This will set the following flags on all the pools:
