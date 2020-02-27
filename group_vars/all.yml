@@ -330,19 +330,19 @@ mon_host_v2:
 # CEPHFS #
 ##########
 cephfs: cephfs # name of the ceph filesystem
-cephfs_data_pool:
-   name: "{{ cephfs_data if cephfs_data is defined else 'cephfs_data' }}"
+#cephfs_data_pool:
+#  name: "{{ cephfs_data if cephfs_data is defined else 'cephfs_data' }}"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
 #  pgp_num: "{{ osd_pool_default_pg_num }}"
 #   rule_name: "erasure_rule"
 #  type: 1
-   erasure_profile: "myecprofile"
+#   erasure_profile: "myecprofile"
 #     expected_num_objects: ""
 #  application: "cephfs"
 #  size: "{{ osd_pool_default_size }}"
 #  min_size: "{{ osd_pool_default_min_size }}"
-cephfs_metadata_pool:
-  name: "{{ cephfs_metadata if cephfs_metadata is defined else 'cephfs_metadata' }}"
+#cephfs_metadata_pool:
+#  name: "{{ cephfs_metadata if cephfs_metadata is defined else 'cephfs_metadata' }}"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
 #  pgp_num: "{{ osd_pool_default_pg_num }}"
 #  rule_name: "replicated_rule"
@@ -352,9 +352,9 @@ cephfs_metadata_pool:
 #  application: "cephfs"
 #  size: "{{ osd_pool_default_size }}"
 #  min_size: "{{ osd_pool_default_min_size }}"
-cephfs_pools:
-  - "{{ cephfs_data_pool }}"
-  - "{{ cephfs_metadata_pool }}"
+#cephfs_pools:
+#  - "{{ cephfs_data_pool }}"
+#  - "{{ cephfs_metadata_pool }}"
 
 ## OSD options
 #
