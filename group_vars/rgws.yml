@@ -47,25 +47,25 @@ copy_admin_key: True
 
 rgw_create_pools:
   "{{ rgw_zone }}.rgw.buckets.data":
-    pg_num: 32
+    pg_num: 28
     type: ec
     ec_profile: myecprofile
-    ec_k: 3
-    ec_m: 2
+    ec_k: 2
+    ec_m: 1
   "{{ rgw_zone }}.rgw.buckets.index":
     pg_num: 16
-    size: 3
+    size: 2
     type: replicated
   "{{ rgw_zone }}.rgw.meta":
     pg_num: 8
-    size: 3
+    size: 2
     type: replicated
   "{{ rgw_zone }}.rgw.log":
-    pg_num: 8
+    pg_num: 4
     size: 2
     type: replicated
   "{{ rgw_zone }}.rgw.control":
-    pg_num: 8
+    pg_num: 6
     size: 2
     type: replicated
 

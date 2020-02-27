@@ -12,15 +12,15 @@
 # will copy the admin key to the /etc/ceph/ directory
 copy_admin_key: True
 
-user_config: false
-cirfis:
-  name: "cirfis"
+#ser_config: false
+#irfis:
+# name: "cirfis"
 # pg_num: "{{ osd_pool_default_pg_num }}"
 # pgp_num: "{{ osd_pool_default_pg_num }}"
 # rule_name: "replicated_rule"
 #  application: "rbd"
 #  type: 1
-  erasure_profile: "myecprofile"
+# erasure_profile: "myecprofile"
 #  expected_num_objects: ""
 #  size: "{{ osd_pool_default_size }}"
 #  min_size: "{{ osd_pool_default_min_size }}"
