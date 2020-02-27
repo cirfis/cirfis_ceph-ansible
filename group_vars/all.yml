@@ -69,7 +69,7 @@
 #ceph_rgwloadbalancer_firewall_zone: public
 
 # Generate local ceph.conf in fetch directory
-#ceph_conf_local: true
+ceph_conf_local: true
 
 ############
 # PACKAGES #
