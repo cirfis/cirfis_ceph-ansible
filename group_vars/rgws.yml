@@ -65,7 +65,7 @@ rgw_create_pools:
     size: 2
     type: replicated
   "{{ rgw_zone }}.rgw.control":
-    pg_num: 8
+    pg_num: 6
     size: 2
     type: replicated
 
