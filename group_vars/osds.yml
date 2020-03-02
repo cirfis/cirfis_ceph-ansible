@@ -111,9 +111,9 @@ osd_auto_discovery: false
 #     data_vg: vg4
 #   - data: /dev/sda
 #   - data: /dev/sdb1
-lvm_volumes:
-  - data: osd1
-    data_vg: ceph
+  lvm_volumes:
+    - data: osd1
+      data_vg: ceph
 #  - data: osd2
 #    data_vg: ceph
 #crush_device_class: ""

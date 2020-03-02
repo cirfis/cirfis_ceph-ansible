@@ -330,13 +330,13 @@ mon_host_v2:
 # CEPHFS #
 ##########
 cephfs: cephfs # name of the ceph filesystem
-#cephfs_data_pool:
+cephfs_data_pool:
 #  name: "{{ cephfs_data if cephfs_data is defined else 'cephfs_data' }}"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
 #  pgp_num: "{{ osd_pool_default_pg_num }}"
 #   rule_name: "erasure_rule"
 #  type: 1
-#   erasure_profile: "myecprofile"
+   erasure_profile: "myecprofile"
 #     expected_num_objects: ""
 #  application: "cephfs"
 #  size: "{{ osd_pool_default_size }}"
@@ -370,7 +370,7 @@ public_network: 10.0.0.1/24
 #osd_mkfs_options_xfs: -f -i size=2048
 #osd_mount_options_xfs: noatime,largeio,inode64,swalloc
 osd_objectstore: bluestore
-#osd_pool_default_pg_num:
+osd_pool_default_pg_num: 32
 
 
 # Any device containing these patterns in their path will be excluded.
@@ -410,11 +410,11 @@ mds_max_mds: 2
 # These variables must be defined at least in all.yml and overrided if needed (inventory host file or group_vars/*.yml).
 # Eg. If you want to specify for each radosgw node which address the radosgw will bind to you can set it in your **inventory host file** by using 'radosgw_address' variable.
 # Preference will go to radosgw_address if both radosgw_address and radosgw_interface are defined.
-#radosgw_interface: eth0
+radosgw_interface: eth0
 #radosgw_address: x.x.x.x
 radosgw_address_block: 10.0.0.1/24
 #radosgw_keystone_ssl: false # activate this when using keystone PKI keys
-radosgw_num_instances: 1
+#radosgw_num_instances: 1
 # Rados Gateway options
 email_address: cirfis@gmail.com
 
@@ -565,7 +565,7 @@ os_tuning_params:
   - { name: fs.file-max, value: 26234859 }
   - { name: vm.zone_reclaim_mode, value: 0 }
   - { name: vm.swappiness, value: 10 }
-  - { name: vm.min_free_kbytes, value: 768000 }
+  #- { name: vm.min_free_kbytes, value: 768000 }
 
 # For Debian & Red Hat/CentOS installs set TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES
 # Set this to a byte value (e.g. 134217728)
@@ -725,7 +725,7 @@ dashboard_admin_password: e8J2bdkUFEqec
 #dashboard_key: ''
 #dashboard_rgw_api_user_id: ceph-dashboard
 #dashboard_rgw_api_admin_resource: ''
-dashboard_rgw_api_no_ssl_verify: True
+dashboard_rgw_api_no_ssl_verify: true
 #dashboard_frontend_vip: ''
 #node_exporter_container_image: "prom/node-exporter:v0.17.0"
 #node_exporter_port: 9100
