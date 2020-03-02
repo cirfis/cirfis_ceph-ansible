@@ -11,8 +11,6 @@
 # ACTIVATE BOTH FSID AND MONITOR_SECRET VARIABLES FOR NON-VAGRANT DEPLOYMENT
 monitor_secret: AQAYY1FeyYlMAxAA/Rv5PRV2rHa2GqUZAa2iBA==
 admin_secret: AQAXY1FeJlPiKBAAcNn63Ois6gsI0s5JLKmAtg==
-#monitor_keyring: AQAYY1FeyYlMAxAA/Rv5PRV2rHa2GqUZAa2iBA==
-#initial_mon_key: AQAYY1FeyYlMAxAA/Rv5PRV2rHa2GqUZAa2iBA==
 
 # Secure your cluster
 # This will set the following flags on all the pools:
