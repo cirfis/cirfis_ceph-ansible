@@ -18,19 +18,19 @@ ceph:
     mdss:
       hosts:
         adam.cirfis.org:
-        fradette.cirfis.org:
         zod.cirfis.org:
+        fradette.cirfis.org:
         manx.cirfis.org:
     rgws:
       hosts:
-        janus.cirfis.org:
-        munk.cirfis.org: 
+#        janus.cirfis.org:
+#        munk.cirfis.org: 
         manx.cirfis.org:
     rgwloadbalancers:
       hosts:
-        janus.cirfis.org:
-        munk.cirfis.org: 
-        manx.cirfis.org:
+#        janus.cirfis.org:
+#        munk.cirfis.org: 
+#        manx.cirfis.org:
     grafana-server:
       hosts:
         fradette.cirfis.org:
