@@ -20,11 +20,11 @@ ceph:
         adam.cirfis.org:
         zod.cirfis.org:
         fradette.cirfis.org:
-        manx.cirfis.org:
+        milner.cirfis.org:
     rgws:
       hosts:
-#        janus.cirfis.org:
-#        munk.cirfis.org: 
+        janus.cirfis.org:
+        munk.cirfis.org: 
         manx.cirfis.org:
     rgwloadbalancers:
       hosts:
@@ -43,8 +43,7 @@ ceph:
         JC.cirfis.org:
         Rutger.cirfis.org:
         geddy.cirfis.org:
-        janus.cirfis.org:
-        milner.cirfis.org:
         zod.cirfis.org:
+        milner.cirfis.org:
   vars:
     ansible_python_interpreter: /usr/bin/python3
