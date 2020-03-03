@@ -14,13 +14,13 @@ ceph:
       hosts:
         janus.cirfis.org:
         munk.cirfis.org:
+        manx.cirfis.org:
     mdss:
       hosts:
         adam.cirfis.org:
         fradette.cirfis.org:
-#        geddy.cirfis.org:
-        manx.cirfis.org:
         zod.cirfis.org:
+        manx.cirfis.org:
     rgws:
       hosts:
         janus.cirfis.org:
@@ -28,7 +28,9 @@ ceph:
         manx.cirfis.org:
     rgwloadbalancers:
       hosts:
-#        geddy.cirfis.org:
+        janus.cirfis.org:
+        munk.cirfis.org: 
+        manx.cirfis.org:
     grafana-server:
       hosts:
         fradette.cirfis.org:
