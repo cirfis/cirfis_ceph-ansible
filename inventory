@@ -13,7 +13,7 @@ ceph:
     mgrs:
       hosts:
         adam.cirfis.org:
-        zod.cirfis.org:
+        fradette.cirfis.org:
     mdss:
       hosts:
         adam.cirfis.org:
@@ -23,24 +23,24 @@ ceph:
         manx.cirfis.org:
     rgws:
       hosts:
-        milner.cirfis.org:
+        zod.cirfis.org:
     grafana-server:
       hosts:
         fradette.cirfis.org:
     nfss:
       hosts:
-         milner.cirfis.org:
+         zod.cirfis.org:
+         manx.cirfis.org:
     clients:
       hosts:
         Dolf.cirfis.org:
         JC.cirfis.org:
         Rutger.cirfis.org:
         geddy.cirfis.org:
-        zod.cirfis.org:
         milner.cirfis.org:
     rgwloadbalancers:
       hosts:
-    isci-gws:
+    iscsigws:
       hosts:
     rbdmirrors:
       hosts:
