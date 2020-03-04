@@ -47,28 +47,35 @@ copy_admin_key: true
 
 rgw_create_pools:
   "{{ rgw_zone }}.rgw.buckets.data":
-    pg_num: 32
+    pg_num: 16
     type: ec
     ec_profile: myecprofile
     ec_k: 2
     ec_m: 1
   "{{ rgw_zone }}.rgw.buckets.index":
-    pg_num: 16
-    size: 2
-    type: replicated
+    pg_num: 8
+    type: ec
+    ec_profile: myecprofile
+    ec_k: 2
+    ec_m: 1
   "{{ rgw_zone }}.rgw.meta":
     pg_num: 8
-    size: 2
-    type: replicated
+    type: ec
+    ec_profile: myecprofile
+    ec_k: 2
+    ec_m: 1
   "{{ rgw_zone }}.rgw.log":
     pg_num: 4
-    size: 2
-    type: replicated
+    type: ec
+    ec_profile: myecprofile
+    ec_k: 2
+    ec_m: 1
   "{{ rgw_zone }}.rgw.control":
-    pg_num: 6
-    size: 2
-    type: replicated
-
+    pg_num: 4
+    type: ec
+    ec_profile: myecprofile
+    ec_k: 2
+    ec_m: 1
 
 ##########
 # DOCKER #
@@ -79,7 +86,7 @@ rgw_create_pools:
 # Default values are based from: https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/2/html/red_hat_ceph_storage_hardware_guide/minimum_recommendations
 # These options can be passed using the 'ceph_rgw_docker_extra_env' variable.
 #ceph_rgw_docker_memory_limit: "{{ ansible_memtotal_mb }}m"
-ceph_rgw_docker_cpu_limit: 2
+#ceph_rgw_docker_cpu_limit: 2
 #ceph_rgw_docker_cpuset_cpus: "0,2,4,6,8,10,12,14,16"
 #ceph_rgw_docker_cpuset_mems: "0"
 
