@@ -20,7 +20,7 @@ ceph:
         adam.cirfis.org:
         zod.cirfis.org:
         fradette.cirfis.org:
-        milner.cirfis.org:
+        manx.cirfis.org:
     rgws:
       hosts:
         janus.cirfis.org:
