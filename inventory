@@ -24,15 +24,12 @@ ceph:
     rgws:
       hosts:
         milner.cirfis.org:
-    rgwloadbalancers:
-      hosts:
-
     grafana-server:
       hosts:
         fradette.cirfis.org:
     nfss:
       hosts:
-
+         milner.cirfis.org:
     clients:
       hosts:
         Dolf.cirfis.org:
@@ -41,5 +38,11 @@ ceph:
         geddy.cirfis.org:
         zod.cirfis.org:
         milner.cirfis.org:
+    rgwloadbalancers:
+      hosts:
+    isci-gws:
+      hosts:
+    rbdmirrors:
+      hosts:
   vars:
     ansible_python_interpreter: /usr/bin/python3
