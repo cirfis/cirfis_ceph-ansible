@@ -12,37 +12,32 @@ ceph:
         manx.cirfis.org:
     mgrs:
       hosts:
+        zod.cirfis.org:
         adam.cirfis.org:
-        fradette.cirfis.org:
     mdss:
       hosts:
         adam.cirfis.org:
         zod.cirfis.org:
-    ##bup
         fradette.cirfis.org:
-        manx.cirfis.org:
     rgws:
       hosts:
-        zod.cirfis.org:
+#        fradette.cirfis.org:
     grafana-server:
       hosts:
-        fradette.cirfis.org:
-    nfss:
-      hosts:
-         zod.cirfis.org:
-         manx.cirfis.org:
+        manx.cirfis.org:
     clients:
       hosts:
         Dolf.cirfis.org:
         JC.cirfis.org:
         Rutger.cirfis.org:
-        geddy.cirfis.org:
-        milner.cirfis.org:
-    rgwloadbalancers:
-      hosts:
-    iscsigws:
-      hosts:
-    rbdmirrors:
-      hosts:
+#        milner.cirfis.org:
+#    rgwloadbalancers:
+#      hosts:
+#    iscsigws:
+#      hosts:
+#    rbdmirrors:
+#      hosts:
+#    nfss:
+#      hosts:
   vars:
     ansible_python_interpreter: /usr/bin/python3
