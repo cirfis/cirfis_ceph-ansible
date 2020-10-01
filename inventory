@@ -2,14 +2,14 @@ ceph:
   children:
     mons:
       hosts:
-        adam.cirfis.org:
-        zod.cirfis.org:
-        fradette.cirfis.org:
+        roGer.cirfis.org:
+        dor.cirfis.org:
+        .cirfis.org:
     osds:
       hosts:
         janus.cirfis.org:
         munk.cirfis.org:
-        manx.cirfis.org:
+        adam.cirfis.org:
     mgrs:
       hosts:
         zod.cirfis.org:
@@ -24,12 +24,12 @@ ceph:
 #        fradette.cirfis.org:
     grafana-server:
       hosts:
-        manx.cirfis.org:
+#        manx.cirfis.org:
     clients:
       hosts:
-        Dolf.cirfis.org:
-        JC.cirfis.org:
-        Rutger.cirfis.org:
+#        Dolf.cirfis.org:
+#        JC.cirfis.org:
+#        Rutger.cirfis.org:
 #        milner.cirfis.org:
 #    rgwloadbalancers:
 #      hosts:

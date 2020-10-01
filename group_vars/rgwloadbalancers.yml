@@ -20,8 +20,8 @@ haproxy_frontend_port: 8024
 #  - no-tlsv11
 #  - no-tls-tickets
 #
-virtual_ips:
-    - 10.0.0.117
+#virtual_ips:
+#    - 10.0.0.117
 #    - 192.168.238.251
 #
 virtual_ip_netmask: 24

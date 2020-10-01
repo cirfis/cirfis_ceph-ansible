@@ -1,0 +1,1707 @@
+[2020-03-06 01:19:17,936][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:19:17,936][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:19:17,936][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:19:17,936][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f2741316160>
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:19:17,937][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7f2741327c10>
+[2020-03-06 01:19:17,937][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:19:17,937][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:19:17,937][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:19:17,937][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:19:18,127][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:19:18,316][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:19:18,338][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:19:18,338][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:19:18,339][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:19:18,389][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:19:18,507][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:19:18,507][milner][DEBUG ] Reading state information...
+[2020-03-06 01:19:18,638][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:19:18,638][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:19:18,638][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:19:18,638][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:19:18,639][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:19:18,639][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:19:18,639][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:19:18,639][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 01:19:19,223][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:19:19,794][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:19:19,831][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:19:19,831][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 01:19:19,834][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:19:19,908][zod][DEBUG ] Reading package lists...
+[2020-03-06 01:19:20,073][zod][DEBUG ] Building dependency tree...
+[2020-03-06 01:19:20,074][zod][DEBUG ] Reading state information...
+[2020-03-06 01:19:20,284][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:19:20,285][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:19:20,285][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:19:20,285][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:19:20,285][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 01:19:20,285][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 01:19:20,285][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 01:19:20,285][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 01:19:20,285][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 01:19:20,285][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:19:20,285][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:19:20,285][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:19:20,285][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:19:20,285][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:19:20,286][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:19:20,413][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:19:20,413][zod][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 01:19:20,413][zod][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mgr-cephadm*
+[2020-03-06 01:19:20,414][zod][DEBUG ]   ceph-mgr-dashboard* ceph-mgr-diskprediction-cloud*
+[2020-03-06 01:19:20,414][zod][DEBUG ]   ceph-mgr-diskprediction-local* ceph-mgr-k8sevents* ceph-mgr-rook* ceph-mon*
+[2020-03-06 01:19:20,414][zod][DEBUG ]   ceph-osd* radosgw*
+[2020-03-06 01:19:20,657][zod][DEBUG ] 0 upgraded, 0 newly installed, 14 to remove and 0 not upgraded.
+[2020-03-06 01:19:20,679][zod][DEBUG ] After this operation, 369 MB disk space will be freed.
+[2020-03-06 01:19:20,728][zod][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 159416 files and directories currently installed.)
+[2020-03-06 01:19:20,732][zod][DEBUG ] Removing ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:19:21,575][zod][DEBUG ] Removing ceph (15.1.0-1bionic) ...
+[2020-03-06 01:19:21,682][zod][DEBUG ] Removing ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:19:22,511][zod][DEBUG ] Removing ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:19:23,362][zod][DEBUG ] Removing radosgw (15.1.0-1bionic) ...
+[2020-03-06 01:19:24,385][zod][DEBUG ] Removing ceph-mgr-rook (15.1.0-1bionic) ...
+[2020-03-06 01:19:24,512][zod][DEBUG ] Removing ceph-mgr-k8sevents (15.1.0-1bionic) ...
+[2020-03-06 01:19:24,641][zod][DEBUG ] Removing ceph-mgr-cephadm (15.1.0-1bionic) ...
+[2020-03-06 01:19:24,768][zod][DEBUG ] Removing ceph-mgr-dashboard (15.1.0-1bionic) ...
+[2020-03-06 01:19:24,973][zod][DEBUG ] Removing ceph-mgr-diskprediction-cloud (15.1.0-1bionic) ...
+[2020-03-06 01:19:25,095][zod][DEBUG ] Removing ceph-mgr-diskprediction-local (15.1.0-1bionic) ...
+[2020-03-06 01:19:25,258][zod][DEBUG ] Removing ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:19:26,539][zod][DEBUG ] Removing ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:19:28,045][zod][DEBUG ] Removing ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:19:29,388][zod][DEBUG ] Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+[2020-03-06 01:19:30,057][zod][DEBUG ] Processing triggers for libc-bin (2.27-3ubuntu1) ...
+[2020-03-06 01:19:30,692][zod][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 157455 files and directories currently installed.)
+[2020-03-06 01:19:30,697][zod][DEBUG ] Purging configuration files for ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:19:32,293][zod][DEBUG ] Purging configuration files for ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:19:33,548][zod][DEBUG ] dpkg: warning: while removing ceph-mds, directory '/var/lib/ceph/mds' not empty so not removed
+[2020-03-06 01:19:33,870][zod][DEBUG ] Purging configuration files for ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:19:35,045][zod][DEBUG ] dpkg: warning: while removing ceph-mon, directory '/var/lib/ceph/mon' not empty so not removed
+[2020-03-06 01:19:35,372][zod][DEBUG ] Purging configuration files for ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:19:36,935][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/tmp' not empty so not removed
+[2020-03-06 01:19:36,935][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rgw' not empty so not removed
+[2020-03-06 01:19:36,935][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rbd-mirror' not empty so not removed
+[2020-03-06 01:19:37,225][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rbd' not empty so not removed
+[2020-03-06 01:19:37,225][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-osd' not empty so not removed
+[2020-03-06 01:19:37,225][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mgr' not empty so not removed
+[2020-03-06 01:19:37,225][zod][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mds' not empty so not removed
+[2020-03-06 01:19:37,225][zod][DEBUG ] Purging configuration files for ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:19:38,880][zod][DEBUG ] Purging configuration files for ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:19:40,554][zod][DEBUG ] Purging configuration files for radosgw (15.1.0-1bionic) ...
+[2020-03-06 01:19:42,000][zod][DEBUG ] dpkg: warning: while removing radosgw, directory '/var/lib/ceph/radosgw' not empty so not removed
+[2020-03-06 01:19:42,560][zod][DEBUG ] Processing triggers for systemd (237-3ubuntu10.39) ...
+[2020-03-06 01:19:43,212][zod][DEBUG ] Processing triggers for ureadahead (0.100.0-21) ...
+[2020-03-06 01:19:44,731][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:19:44,733][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 01:19:55,343][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:19:58,199][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:19:58,338][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:19:58,338][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 01:19:58,344][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:20:00,121][adam][DEBUG ] Reading package lists...
+[2020-03-06 01:20:00,694][adam][DEBUG ] Building dependency tree...
+[2020-03-06 01:20:00,702][adam][DEBUG ] Reading state information...
+[2020-03-06 01:20:01,803][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:20:01,804][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:20:01,805][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:20:01,805][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:20:01,806][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 01:20:01,806][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 01:20:01,806][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 01:20:01,808][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 01:20:01,808][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:20:01,811][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:20:01,812][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:20:01,812][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:20:01,812][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:20:01,812][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:20:01,812][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:20:01,812][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 01:20:02,877][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:20:02,877][adam][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 01:20:02,883][adam][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mgr-cephadm*
+[2020-03-06 01:20:02,883][adam][DEBUG ]   ceph-mgr-dashboard* ceph-mgr-diskprediction-cloud*
+[2020-03-06 01:20:02,883][adam][DEBUG ]   ceph-mgr-diskprediction-local* ceph-mgr-k8sevents* ceph-mgr-rook* ceph-mon*
+[2020-03-06 01:20:02,883][adam][DEBUG ]   ceph-osd* radosgw*
+[2020-03-06 01:20:04,859][adam][DEBUG ] 0 upgraded, 0 newly installed, 14 to remove and 0 not upgraded.
+[2020-03-06 01:20:05,130][adam][DEBUG ] After this operation, 369 MB disk space will be freed.
+[2020-03-06 01:20:06,480][adam][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 96367 files and directories currently installed.)
+[2020-03-06 01:20:06,498][adam][DEBUG ] Removing ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:20:14,435][adam][DEBUG ] Removing ceph (15.1.0-1bionic) ...
+[2020-03-06 01:20:15,674][adam][DEBUG ] Removing ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:20:19,860][adam][DEBUG ] Removing ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:20:23,435][adam][DEBUG ] Removing radosgw (15.1.0-1bionic) ...
+[2020-03-06 01:20:27,612][adam][DEBUG ] Removing ceph-mgr-rook (15.1.0-1bionic) ...
+[2020-03-06 01:20:29,510][adam][DEBUG ] Removing ceph-mgr-k8sevents (15.1.0-1bionic) ...
+[2020-03-06 01:20:34,660][adam][DEBUG ] Removing ceph-mgr-cephadm (15.1.0-1bionic) ...
+[2020-03-06 01:20:36,952][adam][DEBUG ] Removing ceph-mgr-dashboard (15.1.0-1bionic) ...
+[2020-03-06 01:20:39,103][adam][DEBUG ] Removing ceph-mgr-diskprediction-cloud (15.1.0-1bionic) ...
+[2020-03-06 01:20:40,375][adam][DEBUG ] Removing ceph-mgr-diskprediction-local (15.1.0-1bionic) ...
+[2020-03-06 01:20:42,508][adam][DEBUG ] Removing ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:20:46,230][adam][DEBUG ] Removing ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:20:50,929][adam][DEBUG ] Removing ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:20:53,974][adam][DEBUG ] Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+[2020-03-06 01:20:56,146][adam][DEBUG ] Processing triggers for libc-bin (2.27-3ubuntu1) ...
+[2020-03-06 01:20:57,576][adam][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 94407 files and directories currently installed.)
+[2020-03-06 01:20:57,593][adam][DEBUG ] Purging configuration files for ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:21:01,340][adam][DEBUG ] Purging configuration files for ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:21:04,395][adam][DEBUG ] dpkg: warning: while removing ceph-mds, directory '/var/lib/ceph/mds' not empty so not removed
+[2020-03-06 01:21:04,993][adam][DEBUG ] Purging configuration files for ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:21:08,086][adam][DEBUG ] dpkg: warning: while removing ceph-mon, directory '/var/lib/ceph/mon' not empty so not removed
+[2020-03-06 01:21:08,665][adam][DEBUG ] Purging configuration files for ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:21:12,149][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/tmp' not empty so not removed
+[2020-03-06 01:21:12,150][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rgw' not empty so not removed
+[2020-03-06 01:21:12,150][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rbd-mirror' not empty so not removed
+[2020-03-06 01:21:12,151][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rbd' not empty so not removed
+[2020-03-06 01:21:12,151][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-osd' not empty so not removed
+[2020-03-06 01:21:12,152][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mgr' not empty so not removed
+[2020-03-06 01:21:12,152][adam][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mds' not empty so not removed
+[2020-03-06 01:21:12,715][adam][DEBUG ] Purging configuration files for ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:21:17,140][adam][DEBUG ] dpkg: warning: while removing ceph-mgr, directory '/var/lib/ceph/mgr' not empty so not removed
+[2020-03-06 01:21:17,665][adam][DEBUG ] Purging configuration files for ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:21:21,890][adam][DEBUG ] Purging configuration files for radosgw (15.1.0-1bionic) ...
+[2020-03-06 01:21:26,171][adam][DEBUG ] dpkg: warning: while removing radosgw, directory '/var/lib/ceph/radosgw' not empty so not removed
+[2020-03-06 01:21:26,954][adam][DEBUG ] Processing triggers for systemd (237-3ubuntu10.39) ...
+[2020-03-06 01:21:27,957][adam][DEBUG ] Processing triggers for ureadahead (0.100.0-21) ...
+[2020-03-06 01:21:34,776][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:21:34,780][ceph_deploy.install][DEBUG ] Detecting platform for host janus ...
+[2020-03-06 01:21:35,799][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:21:36,857][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:21:36,904][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:21:36,904][janus][INFO  ] Purging Ceph on janus
+[2020-03-06 01:21:36,906][janus][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:21:37,031][janus][DEBUG ] Reading package lists...
+[2020-03-06 01:21:37,368][janus][DEBUG ] Building dependency tree...
+[2020-03-06 01:21:37,369][janus][DEBUG ] Reading state information...
+[2020-03-06 01:21:38,004][janus][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:21:38,006][janus][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:21:38,006][janus][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:21:38,006][janus][DEBUG ]   cephadm fonts-lyx libaio1 libbabeltrace1 libblas3 libcephfs2 libdw1
+[2020-03-06 01:21:38,006][janus][DEBUG ]   libgfortran4 libgoogle-perftools4 libjs-jquery-ui liblapack3 libleveldb1v5
+[2020-03-06 01:21:38,007][janus][DEBUG ]   liboath0 librabbitmq4 libradosstriper1 librbd1 librdkafka1 librgw2
+[2020-03-06 01:21:38,008][janus][DEBUG ]   libsnappy1v5 libtcmalloc-minimal4 python-attr python-matplotlib-data
+[2020-03-06 01:21:38,008][janus][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:21:38,008][janus][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:21:38,009][janus][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:21:38,009][janus][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:21:38,009][janus][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:21:38,009][janus][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:21:38,009][janus][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:21:38,010][janus][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:21:38,010][janus][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:21:38,010][janus][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:21:38,010][janus][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:21:38,010][janus][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:21:38,011][janus][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:21:38,011][janus][DEBUG ]   python3-webob python3-webtest python3-werkzeug
+[2020-03-06 01:21:38,011][janus][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:21:38,491][janus][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 01:21:38,491][janus][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mgr-cephadm*
+[2020-03-06 01:21:38,491][janus][DEBUG ]   ceph-mgr-dashboard* ceph-mgr-diskprediction-cloud*
+[2020-03-06 01:21:38,491][janus][DEBUG ]   ceph-mgr-diskprediction-local* ceph-mgr-k8sevents* ceph-mgr-rook* ceph-mon*
+[2020-03-06 01:21:38,494][janus][DEBUG ]   ceph-osd*
+[2020-03-06 01:21:39,162][janus][DEBUG ] 0 upgraded, 0 newly installed, 13 to remove and 0 not upgraded.
+[2020-03-06 01:21:39,195][janus][DEBUG ] After this operation, 337 MB disk space will be freed.
+[2020-03-06 01:21:39,611][janus][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 164113 files and directories currently installed.)
+[2020-03-06 01:21:39,633][janus][DEBUG ] Removing ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:26:10,688][janus][DEBUG ] Removing ceph (15.1.0-1bionic) ...
+[2020-03-06 01:26:10,786][janus][DEBUG ] Removing ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:30:41,913][janus][DEBUG ] Removing ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:34:39,489][ceph_deploy][ERROR ] KeyboardInterrupt
+
+[2020-03-06 01:34:39,789][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:34:39,789][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:34:39,789][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'munk', 'manx', 'fradette', 'geddy']
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f850c9b3880>
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:34:39,790][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7f850c9c4ca0>
+[2020-03-06 01:34:39,790][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:34:39,980][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:34:40,163][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:34:40,877][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:34:41,450][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:34:44,973][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:34:47,688][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:35:14,140][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:35:39,740][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:35:41,222][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:35:42,666][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:35:43,294][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:35:43,837][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:35:44,557][fradette][DEBUG ] connection detected need for sudo
+[2020-03-06 01:35:45,237][fradette][DEBUG ] connected to host: fradette 
+[2020-03-06 01:35:45,659][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 01:35:46,039][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 01:35:46,086][ceph_deploy.install][ERROR ] Ceph is still installed on: ['janus', 'munk', 'manx', 'fradette']
+[2020-03-06 01:35:46,086][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2020-03-06 01:49:32,286][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:49:32,286][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:49:32,287][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:49:32,287][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7ff3f0aa11f0>
+[2020-03-06 01:49:32,287][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:49:32,287][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7ff3f0ab2c10>
+[2020-03-06 01:49:32,287][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:49:32,287][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:49:32,287][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:49:32,288][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:49:32,477][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:49:32,617][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:49:32,638][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:49:32,638][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:49:32,640][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:49:32,689][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:49:32,805][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:49:32,805][milner][DEBUG ] Reading state information...
+[2020-03-06 01:49:32,936][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:49:32,936][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:49:32,937][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:49:32,937][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:49:32,937][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:49:32,938][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:49:32,939][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:49:32,939][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 01:49:33,514][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:49:34,092][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:49:34,120][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:49:34,120][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 01:49:34,123][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:49:34,189][zod][DEBUG ] Reading package lists...
+[2020-03-06 01:49:34,359][zod][DEBUG ] Building dependency tree...
+[2020-03-06 01:49:34,360][zod][DEBUG ] Reading state information...
+[2020-03-06 01:49:34,562][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:49:34,562][zod][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:49:34,562][zod][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:49:34,562][zod][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:49:34,562][zod][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:49:34,562][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:49:34,562][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:49:34,563][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:49:34,563][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 01:49:34,563][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 01:49:34,563][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 01:49:34,563][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 01:49:34,563][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:49:34,564][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:49:34,565][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:49:34,565][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:49:34,565][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:49:34,565][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:49:34,593][zod][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:49:34,593][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:49:34,593][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 01:49:37,363][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:49:40,157][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:49:40,294][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:49:40,294][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 01:49:40,300][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:49:40,612][adam][DEBUG ] Reading package lists...
+[2020-03-06 01:49:41,182][adam][DEBUG ] Building dependency tree...
+[2020-03-06 01:49:41,186][adam][DEBUG ] Reading state information...
+[2020-03-06 01:49:42,213][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:49:42,214][adam][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:49:42,215][adam][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:49:42,215][adam][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:49:42,216][adam][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:49:42,216][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:49:42,217][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:49:42,218][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:49:42,218][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 01:49:42,219][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 01:49:42,219][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 01:49:42,220][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 01:49:42,363][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:49:42,363][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:49:42,363][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:49:42,363][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:49:42,364][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:49:42,364][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:49:42,365][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:49:42,365][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:49:42,366][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:49:42,366][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:49:42,366][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:49:42,366][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:49:42,367][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:49:42,367][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:49:42,367][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 01:49:42,367][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:49:42,368][adam][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:49:42,369][ceph_deploy.install][DEBUG ] Detecting platform for host janus ...
+[2020-03-06 01:50:07,859][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:50:19,628][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:50:19,676][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:50:19,676][janus][INFO  ] Purging Ceph on janus
+[2020-03-06 01:50:19,678][janus][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:50:19,760][janus][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:50:19,761][janus][WARNING] E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
+[2020-03-06 01:50:19,761][janus][WARNING] E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+[2020-03-06 01:50:19,767][janus][ERROR ] RuntimeError: command returned non-zero exit status: 100
+[2020-03-06 01:50:19,767][ceph_deploy][ERROR ] RuntimeError: Failed to execute command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+
+[2020-03-06 01:50:20,110][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:50:20,110][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:50:20,110][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:50:20,110][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'munk', 'manx', 'fradette', 'geddy']
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f639e5a58e0>
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:50:20,111][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7f639e5b7ca0>
+[2020-03-06 01:50:20,111][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:50:20,300][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:50:20,442][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:50:21,043][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:50:21,657][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:50:24,486][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:50:27,222][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:50:52,860][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:51:18,361][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:51:19,859][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:51:21,320][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:51:21,944][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:51:22,498][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:51:23,213][fradette][DEBUG ] connection detected need for sudo
+[2020-03-06 01:51:23,887][fradette][DEBUG ] connected to host: fradette 
+[2020-03-06 01:51:24,305][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 01:51:24,679][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 01:51:24,726][ceph_deploy.install][ERROR ] Ceph is still installed on: ['munk', 'manx', 'fradette']
+[2020-03-06 01:51:24,726][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2020-03-06 01:53:56,477][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:53:56,477][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:53:56,477][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:53:56,477][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:53:56,477][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:53:56,477][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f26f5580160>
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:53:56,478][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7f26f5591c10>
+[2020-03-06 01:53:56,478][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:53:56,478][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:53:56,478][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:53:56,478][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:53:56,624][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:53:56,765][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:53:56,785][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:53:56,785][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:53:56,786][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:53:56,835][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:53:56,952][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:53:56,953][milner][DEBUG ] Reading state information...
+[2020-03-06 01:53:57,089][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:53:57,089][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:53:57,089][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:53:57,089][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:53:57,089][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:53:57,089][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:53:57,089][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:53:57,089][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 01:53:57,890][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:53:58,494][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:53:58,525][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:53:58,525][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 01:53:58,528][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:53:58,676][zod][DEBUG ] Reading package lists...
+[2020-03-06 01:53:58,844][zod][DEBUG ] Building dependency tree...
+[2020-03-06 01:53:58,847][zod][DEBUG ] Reading state information...
+[2020-03-06 01:53:59,040][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:53:59,040][zod][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:53:59,040][zod][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:53:59,040][zod][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:53:59,040][zod][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:53:59,040][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:53:59,040][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:53:59,041][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:53:59,041][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 01:53:59,041][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 01:53:59,041][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 01:53:59,041][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 01:53:59,042][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 01:53:59,042][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:53:59,042][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:53:59,042][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:53:59,042][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:53:59,043][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:53:59,044][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:53:59,131][zod][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:53:59,131][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:53:59,131][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 01:54:02,996][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:54:05,994][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:54:06,127][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:54:06,127][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 01:54:06,132][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:54:07,855][adam][DEBUG ] Reading package lists...
+[2020-03-06 01:54:08,423][adam][DEBUG ] Building dependency tree...
+[2020-03-06 01:54:08,432][adam][DEBUG ] Reading state information...
+[2020-03-06 01:54:09,453][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:54:09,455][adam][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:54:09,455][adam][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:54:09,456][adam][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:54:09,456][adam][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:54:09,456][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:54:09,456][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:54:09,456][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:54:09,456][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 01:54:09,456][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 01:54:09,456][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 01:54:09,460][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 01:54:09,460][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:54:09,461][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 01:54:09,996][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:54:09,996][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:54:09,996][adam][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:54:09,997][ceph_deploy.install][DEBUG ] Detecting platform for host janus ...
+[2020-03-06 01:54:10,005][ceph_deploy][ERROR ] RuntimeError: connecting to host: janus resulted in errors: HostNotFound janus
+
+[2020-03-06 01:54:10,305][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'munk', 'manx', 'fradette', 'geddy']
+[2020-03-06 01:54:10,305][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f1cd6d988e0>
+[2020-03-06 01:54:10,306][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:54:10,306][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7f1cd6da9ca0>
+[2020-03-06 01:54:10,306][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:54:10,511][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:54:10,702][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:54:11,321][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:54:11,935][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:54:14,938][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:54:17,919][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:54:18,058][ceph_deploy][ERROR ] RuntimeError: connecting to host: janus resulted in errors: HostNotFound janus
+
+[2020-03-06 01:54:57,218][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam manx fradette geddy munk
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7faa11ca81f0>
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:54:57,219][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7faa11cb9c10>
+[2020-03-06 01:54:57,219][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:54:57,219][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:54:57,219][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam manx fradette geddy munk
+[2020-03-06 01:54:57,219][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:54:57,410][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:54:57,593][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:54:57,615][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:54:57,615][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:54:57,616][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:54:57,666][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:54:57,802][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:54:57,802][milner][DEBUG ] Reading state information...
+[2020-03-06 01:54:57,933][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:54:57,933][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:54:57,933][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:54:57,933][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:54:57,933][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:54:57,933][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:54:57,933][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:54:57,933][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 01:54:58,521][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:54:59,122][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:54:59,154][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:54:59,154][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 01:54:59,157][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:54:59,224][zod][DEBUG ] Reading package lists...
+[2020-03-06 01:54:59,390][zod][DEBUG ] Building dependency tree...
+[2020-03-06 01:54:59,390][zod][DEBUG ] Reading state information...
+[2020-03-06 01:54:59,589][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:54:59,589][zod][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:54:59,589][zod][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:54:59,589][zod][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:54:59,589][zod][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:54:59,589][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:54:59,589][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:54:59,589][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:54:59,589][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 01:54:59,589][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 01:54:59,589][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 01:54:59,589][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 01:54:59,589][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:54:59,589][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:54:59,590][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:54:59,616][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:54:59,616][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:54:59,616][zod][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:54:59,617][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 01:55:02,578][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:55:05,539][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:55:05,672][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:55:05,673][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 01:55:05,678][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:55:05,990][adam][DEBUG ] Reading package lists...
+[2020-03-06 01:55:06,562][adam][DEBUG ] Building dependency tree...
+[2020-03-06 01:55:06,566][adam][DEBUG ] Reading state information...
+[2020-03-06 01:55:07,590][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:55:07,591][adam][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:55:07,591][adam][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:55:07,592][adam][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:55:07,592][adam][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:55:07,593][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:55:07,594][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:55:07,595][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:55:07,595][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 01:55:07,595][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 01:55:07,596][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 01:55:07,596][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 01:55:07,738][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:55:07,738][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:55:07,739][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:55:07,739][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:55:07,739][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:55:07,739][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:55:07,740][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:55:07,740][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:55:07,740][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:55:07,740][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:55:07,740][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:55:07,740][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:55:07,741][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:55:07,741][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:55:07,741][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 01:55:07,741][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:55:07,741][adam][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:55:07,741][ceph_deploy.install][DEBUG ] Detecting platform for host manx ...
+[2020-03-06 01:55:08,174][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:55:08,641][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:55:08,674][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:55:08,674][manx][INFO  ] Purging Ceph on manx
+[2020-03-06 01:55:08,675][manx][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:55:08,872][manx][DEBUG ] Reading package lists...
+[2020-03-06 01:55:09,017][manx][DEBUG ] Building dependency tree...
+[2020-03-06 01:55:09,019][manx][DEBUG ] Reading state information...
+[2020-03-06 01:55:09,168][manx][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:55:09,168][manx][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:55:09,168][manx][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:55:09,168][manx][DEBUG ]   cephadm daemon fonts-lyx libblas3 libcephfs2 libgfortran4
+[2020-03-06 01:55:09,168][manx][DEBUG ]   libgoogle-perftools4 libjs-jquery-ui liblapack3 libleveldb1v5 libntirpc1
+[2020-03-06 01:55:09,168][manx][DEBUG ]   liboath0 librabbitmq4 libradosstriper1 librbd1 librdkafka1 librgw2
+[2020-03-06 01:55:09,168][manx][DEBUG ]   libtcmalloc-minimal4 libwbclient0 python-attr python-matplotlib-data
+[2020-03-06 01:55:09,168][manx][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:55:09,169][manx][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:55:09,169][manx][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:55:09,329][manx][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 01:55:09,329][manx][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mgr-cephadm*
+[2020-03-06 01:55:09,329][manx][DEBUG ]   ceph-mgr-dashboard* ceph-mgr-diskprediction-cloud*
+[2020-03-06 01:55:09,329][manx][DEBUG ]   ceph-mgr-diskprediction-local* ceph-mgr-k8sevents* ceph-mgr-rook* ceph-mon*
+[2020-03-06 01:55:09,330][manx][DEBUG ]   ceph-osd*
+[2020-03-06 01:55:09,658][manx][DEBUG ] 0 upgraded, 0 newly installed, 13 to remove and 0 not upgraded.
+[2020-03-06 01:55:09,691][manx][DEBUG ] After this operation, 337 MB disk space will be freed.
+[2020-03-06 01:55:10,149][manx][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 165850 files and directories currently installed.)
+[2020-03-06 01:55:10,154][manx][DEBUG ] Removing ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:55:11,265][manx][DEBUG ] Removing ceph (15.1.0-1bionic) ...
+[2020-03-06 01:55:11,420][manx][DEBUG ] Removing ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:55:12,592][manx][DEBUG ] Removing ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:55:13,607][manx][DEBUG ] Removing ceph-mgr-rook (15.1.0-1bionic) ...
+[2020-03-06 01:55:13,805][manx][DEBUG ] Removing ceph-mgr-k8sevents (15.1.0-1bionic) ...
+[2020-03-06 01:55:14,008][manx][DEBUG ] Removing ceph-mgr-cephadm (15.1.0-1bionic) ...
+[2020-03-06 01:55:14,207][manx][DEBUG ] Removing ceph-mgr-dashboard (15.1.0-1bionic) ...
+[2020-03-06 01:55:14,516][manx][DEBUG ] Removing ceph-mgr-diskprediction-cloud (15.1.0-1bionic) ...
+[2020-03-06 01:55:14,718][manx][DEBUG ] Removing ceph-mgr-diskprediction-local (15.1.0-1bionic) ...
+[2020-03-06 01:55:14,980][manx][DEBUG ] Removing ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:55:15,909][manx][DEBUG ] Removing ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:55:16,859][manx][DEBUG ] Removing ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:55:17,629][manx][DEBUG ] Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+[2020-03-06 01:55:18,068][manx][DEBUG ] Processing triggers for libc-bin (2.27-3ubuntu1) ...
+[2020-03-06 01:55:18,340][manx][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 163896 files and directories currently installed.)
+[2020-03-06 01:55:18,345][manx][DEBUG ] Purging configuration files for ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:55:19,204][manx][DEBUG ] dpkg: warning: while removing ceph-osd, directory '/var/lib/ceph/osd' not empty so not removed
+[2020-03-06 01:55:19,275][manx][DEBUG ] Purging configuration files for ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:55:20,126][manx][DEBUG ] dpkg: warning: while removing ceph-mds, directory '/var/lib/ceph/mds' not empty so not removed
+[2020-03-06 01:55:20,216][manx][DEBUG ] Purging configuration files for ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:55:21,138][manx][DEBUG ] Purging configuration files for ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:55:22,094][manx][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-osd' not empty so not removed
+[2020-03-06 01:55:22,163][manx][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mds' not empty so not removed
+[2020-03-06 01:55:22,163][manx][DEBUG ] Purging configuration files for ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:55:23,074][manx][DEBUG ] Purging configuration files for ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:55:24,075][manx][DEBUG ] Processing triggers for systemd (237-3ubuntu10.39) ...
+[2020-03-06 01:55:24,344][manx][DEBUG ] Processing triggers for ureadahead (0.100.0-21) ...
+[2020-03-06 01:55:24,646][manx][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:55:24,647][ceph_deploy.install][DEBUG ] Detecting platform for host fradette ...
+[2020-03-06 01:55:50,381][ceph_deploy][ERROR ] RuntimeError: connecting to host: fradette resulted in errors: HostNotFound fradette
+
+[2020-03-06 01:55:50,689][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:55:50,689][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus manx fradette geddy
+[2020-03-06 01:55:50,689][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy']
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f492d3cf8e0>
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:55:50,690][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7f492d3e0ca0>
+[2020-03-06 01:55:50,690][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus manx fradette geddy
+[2020-03-06 01:55:50,880][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:55:51,021][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:55:51,635][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:55:52,239][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:55:55,226][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:55:58,168][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:55:58,386][ceph_deploy][ERROR ] RuntimeError: connecting to host: janus resulted in errors: HostNotFound janus
+
+[2020-03-06 01:56:40,112][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:56:40,112][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner fradette geddy munk
+[2020-03-06 01:56:40,112][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:56:40,112][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:56:40,112][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f2c313c41f0>
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:56:40,113][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7f2c313d5c10>
+[2020-03-06 01:56:40,113][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:56:40,113][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:56:40,113][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner fradette geddy munk
+[2020-03-06 01:56:40,113][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:56:40,327][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:56:40,509][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:56:40,530][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:56:40,531][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:56:40,532][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:56:40,581][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:56:40,697][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:56:40,697][milner][DEBUG ] Reading state information...
+[2020-03-06 01:56:40,827][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:56:40,827][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:56:40,827][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:56:40,827][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:56:40,827][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:56:40,827][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:56:40,827][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:56:40,827][ceph_deploy.install][DEBUG ] Detecting platform for host fradette ...
+[2020-03-06 01:56:51,180][ceph_deploy][ERROR ] RuntimeError: connecting to host: fradette resulted in errors: HostNotFound fradette
+
+[2020-03-06 01:56:51,489][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:56:51,489][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam manx geddy munk
+[2020-03-06 01:56:51,489][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:56:51,489][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'manx', 'geddy', 'munk']
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f6544fd08b0>
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:56:51,490][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7f6544fe1ca0>
+[2020-03-06 01:56:51,490][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam manx geddy munk
+[2020-03-06 01:56:51,687][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:56:51,853][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:56:52,435][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:56:53,048][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:56:56,028][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:56:58,962][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:56:59,748][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:00,318][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:57:00,757][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:01,178][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 01:57:02,701][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:04,156][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:57:04,224][ceph_deploy.install][ERROR ] Ceph is still installed on: ['munk']
+[2020-03-06 01:57:04,224][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2020-03-06 01:57:19,519][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:57:19,519][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner geddy munk
+[2020-03-06 01:57:19,519][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:57:19,519][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'geddy', 'munk']
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7fc236c91130>
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:57:19,520][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7fc236ca2c10>
+[2020-03-06 01:57:19,520][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:57:19,520][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:57:19,520][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner geddy munk
+[2020-03-06 01:57:19,520][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:57:19,713][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:19,896][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:57:19,917][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:57:19,918][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:57:19,919][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:57:19,968][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:57:20,084][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:57:20,084][milner][DEBUG ] Reading state information...
+[2020-03-06 01:57:20,212][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:57:20,213][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:57:20,213][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:57:20,213][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:57:20,213][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:57:20,213][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:57:20,213][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:57:20,213][ceph_deploy.install][DEBUG ] Detecting platform for host geddy ...
+[2020-03-06 01:57:20,585][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:20,962][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 01:57:21,008][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:57:21,008][geddy][INFO  ] Purging Ceph on geddy
+[2020-03-06 01:57:21,010][geddy][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:57:21,116][geddy][DEBUG ] Reading package lists...
+[2020-03-06 01:57:21,413][geddy][DEBUG ] Building dependency tree...
+[2020-03-06 01:57:21,413][geddy][DEBUG ] Reading state information...
+[2020-03-06 01:57:22,012][geddy][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:57:22,012][geddy][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:57:22,023][geddy][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:57:22,023][geddy][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:57:22,023][geddy][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:57:22,023][geddy][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:57:22,023][geddy][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:57:22,024][ceph_deploy.install][DEBUG ] Detecting platform for host munk ...
+[2020-03-06 01:57:23,467][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:24,930][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:57:24,995][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:57:24,996][munk][INFO  ] Purging Ceph on munk
+[2020-03-06 01:57:24,999][munk][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:57:25,166][munk][DEBUG ] Reading package lists...
+[2020-03-06 01:57:25,470][munk][DEBUG ] Building dependency tree...
+[2020-03-06 01:57:25,472][munk][DEBUG ] Reading state information...
+[2020-03-06 01:57:26,080][munk][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:57:26,081][munk][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:57:26,081][munk][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:57:26,081][munk][DEBUG ]   cephadm fonts-lyx libaio1 libbabeltrace1 libblas3 libcephfs2 libdw1
+[2020-03-06 01:57:26,082][munk][DEBUG ]   libgfortran4 libgoogle-perftools4 libjbig0 libjpeg-turbo8 libjpeg8
+[2020-03-06 01:57:26,082][munk][DEBUG ]   libjs-jquery-ui liblapack3 liblcms2-2 libleveldb1v5 liboath0 librabbitmq4
+[2020-03-06 01:57:26,083][munk][DEBUG ]   libradosstriper1 librbd1 librdkafka1 librgw2 libsnappy1v5
+[2020-03-06 01:57:26,083][munk][DEBUG ]   libtcmalloc-minimal4 libtiff5 libwebp6 libwebpdemux2 libwebpmux3 python-attr
+[2020-03-06 01:57:26,084][munk][DEBUG ]   python-matplotlib-data python-pastedeploy-tpl python-pluggy python-py
+[2020-03-06 01:57:26,084][munk][DEBUG ]   python-pytest python3-bcrypt python3-bs4 python3-ceph-argparse
+[2020-03-06 01:57:26,084][munk][DEBUG ]   python3-ceph-common python3-cephfs python3-cherrypy3 python3-cycler
+[2020-03-06 01:57:26,084][munk][DEBUG ]   python3-dateutil python3-decorator python3-fasteners python3-html5lib
+[2020-03-06 01:57:26,084][munk][DEBUG ]   python3-joblib python3-kubernetes python3-logutils python3-lxml python3-mako
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-matplotlib python3-monotonic python3-nose python3-numpy
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-oauth2client python3-olefile python3-paste python3-pastedeploy
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-pastescript python3-pecan python3-pil python3-pluggy
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-prettytable python3-py python3-pyinotify python3-pyparsing
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-pytest python3-rados python3-rbd python3-repoze.lru python3-rgw
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-routes python3-rsa python3-scipy python3-simplegeneric
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-simplejson python3-singledispatch python3-sklearn
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-sklearn-lib python3-sqlalchemy python3-tempita python3-tz
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:57:26,085][munk][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:57:26,457][munk][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:57:26,457][munk][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 01:57:26,460][munk][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mgr-cephadm*
+[2020-03-06 01:57:26,461][munk][DEBUG ]   ceph-mgr-dashboard* ceph-mgr-diskprediction-cloud*
+[2020-03-06 01:57:26,461][munk][DEBUG ]   ceph-mgr-diskprediction-local* ceph-mgr-k8sevents* ceph-mgr-rook* ceph-mon*
+[2020-03-06 01:57:26,461][munk][DEBUG ]   ceph-osd*
+[2020-03-06 01:57:27,248][munk][DEBUG ] 0 upgraded, 0 newly installed, 13 to remove and 0 not upgraded.
+[2020-03-06 01:57:27,299][munk][DEBUG ] After this operation, 337 MB disk space will be freed.
+[2020-03-06 01:57:27,895][munk][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 160627 files and directories currently installed.)
+[2020-03-06 01:57:27,912][munk][DEBUG ] Removing ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:57:29,331][munk][DEBUG ] Removing ceph (15.1.0-1bionic) ...
+[2020-03-06 01:57:29,602][munk][DEBUG ] Removing ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:57:31,485][munk][DEBUG ] Removing ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:57:32,772][munk][DEBUG ] Removing ceph-mgr-rook (15.1.0-1bionic) ...
+[2020-03-06 01:57:32,966][munk][DEBUG ] Removing ceph-mgr-k8sevents (15.1.0-1bionic) ...
+[2020-03-06 01:57:33,153][munk][DEBUG ] Removing ceph-mgr-cephadm (15.1.0-1bionic) ...
+[2020-03-06 01:57:33,362][munk][DEBUG ] Removing ceph-mgr-dashboard (15.1.0-1bionic) ...
+[2020-03-06 01:57:33,789][munk][DEBUG ] Removing ceph-mgr-diskprediction-cloud (15.1.0-1bionic) ...
+[2020-03-06 01:57:34,277][munk][DEBUG ] Removing ceph-mgr-diskprediction-local (15.1.0-1bionic) ...
+[2020-03-06 01:57:34,520][munk][DEBUG ] Removing ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:57:35,766][munk][DEBUG ] Removing ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:57:37,063][munk][DEBUG ] Removing ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:57:38,086][munk][DEBUG ] Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+[2020-03-06 01:57:39,035][munk][DEBUG ] Processing triggers for libc-bin (2.27-3ubuntu1) ...
+[2020-03-06 01:57:39,387][munk][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 158671 files and directories currently installed.)
+[2020-03-06 01:57:39,403][munk][DEBUG ] Purging configuration files for ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 01:57:40,603][munk][DEBUG ] dpkg: warning: while removing ceph-osd, directory '/var/lib/ceph/osd' not empty so not removed
+[2020-03-06 01:57:40,673][munk][DEBUG ] Purging configuration files for ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 01:57:41,880][munk][DEBUG ] Purging configuration files for ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 01:57:43,077][munk][DEBUG ] Purging configuration files for ceph-base (15.1.0-1bionic) ...
+[2020-03-06 01:57:44,847][munk][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-osd' not empty so not removed
+[2020-03-06 01:57:44,915][munk][DEBUG ] Purging configuration files for ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 01:57:46,110][munk][DEBUG ] Purging configuration files for ceph-common (15.1.0-1bionic) ...
+[2020-03-06 01:57:47,456][munk][DEBUG ] Processing triggers for systemd (237-3ubuntu10.39) ...
+[2020-03-06 01:57:47,810][munk][DEBUG ] Processing triggers for ureadahead (0.100.0-21) ...
+[2020-03-06 01:57:50,494][munk][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:57:50,795][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam manx geddy munk
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:57:50,795][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'manx', 'geddy', 'munk']
+[2020-03-06 01:57:50,796][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7fc18b2ea8b0>
+[2020-03-06 01:57:50,796][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:57:50,796][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7fc18b2fbca0>
+[2020-03-06 01:57:50,796][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam manx geddy munk
+[2020-03-06 01:57:50,943][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:51,083][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:57:51,688][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:52,299][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:57:55,280][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:58,219][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:57:58,924][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:57:59,495][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:57:59,905][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:00,306][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 01:58:02,181][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:03,624][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:58:03,876][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:04,017][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:58:04,039][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:04,039][milner][INFO  ] purging data on milner
+[2020-03-06 01:58:04,040][milner][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:04,051][milner][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 01:58:04,664][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:05,246][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:58:05,277][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:05,277][zod][INFO  ] purging data on zod
+[2020-03-06 01:58:05,279][zod][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:05,294][zod][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 01:58:08,285][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:11,227][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:58:11,361][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:11,361][adam][INFO  ] purging data on adam
+[2020-03-06 01:58:11,366][adam][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:11,434][adam][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 01:58:12,018][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:12,595][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:58:12,618][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:12,618][manx][INFO  ] purging data on manx
+[2020-03-06 01:58:12,621][manx][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:12,626][manx][WARNING] OSDs may still be mounted, trying to unmount them
+[2020-03-06 01:58:12,627][manx][INFO  ] Running command: sudo find /var/lib/ceph -mindepth 1 -maxdepth 2 -type d -exec umount {} ;
+[2020-03-06 01:58:12,636][manx][WARNING] umount: /var/lib/ceph/osd: not mounted.
+[2020-03-06 01:58:12,655][manx][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:12,662][manx][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 01:58:13,041][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:13,415][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 01:58:13,461][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:13,461][geddy][INFO  ] purging data on geddy
+[2020-03-06 01:58:13,463][geddy][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:13,474][geddy][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 01:58:14,930][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:16,381][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:58:16,447][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:16,447][munk][INFO  ] purging data on munk
+[2020-03-06 01:58:16,450][munk][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:16,463][munk][WARNING] OSDs may still be mounted, trying to unmount them
+[2020-03-06 01:58:16,466][munk][INFO  ] Running command: sudo find /var/lib/ceph -mindepth 1 -maxdepth 2 -type d -exec umount {} ;
+[2020-03-06 01:58:16,485][munk][WARNING] umount: /var/lib/ceph/osd: not mounted.
+[2020-03-06 01:58:16,507][munk][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 01:58:16,523][munk][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 01:58:47,104][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:58:47,104][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:58:47,104][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:58:47,104][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:58:47,104][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:58:47,104][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:58:47,104][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:58:47,105][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:58:47,105][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:58:47,105][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:58:47,105][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7fb792f76160>
+[2020-03-06 01:58:47,105][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:58:47,105][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7fb792f87c10>
+[2020-03-06 01:58:47,105][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:58:47,105][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:58:47,105][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:58:47,105][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:58:47,307][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:47,507][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:58:47,528][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:47,528][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:58:47,530][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:58:47,581][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:58:47,697][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:58:47,697][milner][DEBUG ] Reading state information...
+[2020-03-06 01:58:47,827][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:58:47,827][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:58:47,827][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:58:47,827][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:58:47,827][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:58:47,827][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:58:47,827][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:58:47,827][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 01:58:48,459][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:49,063][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:58:49,096][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:49,096][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 01:58:49,100][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:58:49,173][zod][DEBUG ] Reading package lists...
+[2020-03-06 01:58:49,336][zod][DEBUG ] Building dependency tree...
+[2020-03-06 01:58:49,338][zod][DEBUG ] Reading state information...
+[2020-03-06 01:58:49,538][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:58:49,538][zod][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:58:49,539][zod][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:58:49,539][zod][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:58:49,539][zod][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:58:49,539][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:58:49,539][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:58:49,539][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:58:49,539][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 01:58:49,539][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 01:58:49,539][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 01:58:49,539][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 01:58:49,539][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:58:49,541][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:58:49,566][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:58:49,566][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:58:49,566][zod][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:58:49,566][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 01:58:52,462][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:55,385][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:58:55,518][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:55,518][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 01:58:55,523][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:58:55,830][adam][DEBUG ] Reading package lists...
+[2020-03-06 01:58:56,399][adam][DEBUG ] Building dependency tree...
+[2020-03-06 01:58:56,402][adam][DEBUG ] Reading state information...
+[2020-03-06 01:58:57,425][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:58:57,427][adam][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:58:57,427][adam][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:58:57,428][adam][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:58:57,428][adam][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:58:57,429][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:58:57,429][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:58:57,430][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:58:57,431][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 01:58:57,431][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 01:58:57,432][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 01:58:57,432][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 01:58:57,571][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:58:57,571][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:58:57,571][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:58:57,572][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:58:57,572][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:58:57,572][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:58:57,572][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:58:57,573][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 01:58:57,573][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:58:57,574][adam][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:58:57,574][ceph_deploy.install][DEBUG ] Detecting platform for host janus ...
+[2020-03-06 01:58:58,637][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:58:59,745][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:58:59,792][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:58:59,792][janus][INFO  ] Purging Ceph on janus
+[2020-03-06 01:58:59,794][janus][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:58:59,890][janus][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:58:59,890][janus][WARNING] E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+[2020-03-06 01:58:59,900][janus][ERROR ] RuntimeError: command returned non-zero exit status: 100
+[2020-03-06 01:58:59,900][ceph_deploy][ERROR ] RuntimeError: Failed to execute command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+
+[2020-03-06 01:59:00,239][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'munk', 'manx', 'fradette', 'geddy']
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f56bfc8e880>
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:59:00,239][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7f56bfc9fca0>
+[2020-03-06 01:59:00,239][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:59:00,430][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:00,579][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:59:01,183][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:01,785][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:59:04,755][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:07,681][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:59:08,880][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:09,985][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:59:11,465][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:12,931][munk][DEBUG ] connected to host: munk 
+[2020-03-06 01:59:13,577][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:14,155][manx][DEBUG ] connected to host: manx 
+[2020-03-06 01:59:26,221][ceph_deploy][ERROR ] RuntimeError: connecting to host: fradette resulted in errors: HostNotFound fradette
+
+[2020-03-06 01:59:43,444][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7fed7b775160>
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:59:43,444][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7fed7b786c10>
+[2020-03-06 01:59:43,444][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 01:59:43,444][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 01:59:43,445][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam janus manx fradette geddy munk
+[2020-03-06 01:59:43,445][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 01:59:43,633][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:43,816][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:59:43,838][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:59:43,838][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 01:59:43,840][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:59:43,889][milner][DEBUG ] Reading package lists...
+[2020-03-06 01:59:44,005][milner][DEBUG ] Building dependency tree...
+[2020-03-06 01:59:44,005][milner][DEBUG ] Reading state information...
+[2020-03-06 01:59:44,136][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:59:44,136][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:59:44,136][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:59:44,136][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:59:44,136][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:59:44,136][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:59:44,136][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:59:44,136][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 01:59:44,719][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:45,321][zod][DEBUG ] connected to host: zod 
+[2020-03-06 01:59:45,354][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:59:45,354][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 01:59:45,358][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:59:45,422][zod][DEBUG ] Reading package lists...
+[2020-03-06 01:59:45,596][zod][DEBUG ] Building dependency tree...
+[2020-03-06 01:59:45,597][zod][DEBUG ] Reading state information...
+[2020-03-06 01:59:45,782][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:59:45,782][zod][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:59:45,782][zod][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:59:45,782][zod][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:59:45,783][zod][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:59:45,783][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:59:45,783][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:59:45,783][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:59:45,783][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 01:59:45,783][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 01:59:45,784][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 01:59:45,784][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 01:59:45,785][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 01:59:45,811][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:59:45,812][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 01:59:45,812][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 01:59:45,812][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:59:45,813][zod][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:59:45,813][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 01:59:48,724][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:51,682][adam][DEBUG ] connected to host: adam 
+[2020-03-06 01:59:51,818][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:59:51,818][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 01:59:51,825][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:59:52,138][adam][DEBUG ] Reading package lists...
+[2020-03-06 01:59:52,708][adam][DEBUG ] Building dependency tree...
+[2020-03-06 01:59:52,711][adam][DEBUG ] Reading state information...
+[2020-03-06 01:59:53,735][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 01:59:53,736][adam][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 01:59:53,737][adam][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 01:59:53,737][adam][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 01:59:53,738][adam][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 01:59:53,738][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 01:59:53,739][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 01:59:53,740][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 01:59:53,740][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 01:59:53,741][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 01:59:53,741][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 01:59:53,742][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 01:59:53,880][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 01:59:53,880][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:59:53,880][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 01:59:53,881][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 01:59:53,881][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 01:59:53,881][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 01:59:53,882][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 01:59:53,882][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 01:59:53,883][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 01:59:53,884][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 01:59:53,885][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 01:59:53,885][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 01:59:53,885][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 01:59:53,885][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 01:59:53,885][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 01:59:53,885][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 01:59:53,885][adam][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 01:59:53,886][ceph_deploy.install][DEBUG ] Detecting platform for host janus ...
+[2020-03-06 01:59:54,947][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:56,065][janus][DEBUG ] connected to host: janus 
+[2020-03-06 01:59:56,111][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 01:59:56,111][janus][INFO  ] Purging Ceph on janus
+[2020-03-06 01:59:56,114][janus][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 01:59:56,195][janus][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 01:59:56,195][janus][WARNING] E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+[2020-03-06 01:59:56,203][janus][ERROR ] RuntimeError: command returned non-zero exit status: 100
+[2020-03-06 01:59:56,203][ceph_deploy][ERROR ] RuntimeError: Failed to execute command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+
+[2020-03-06 01:59:56,529][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 01:59:56,529][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:59:56,529][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 01:59:56,529][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 01:59:56,529][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 01:59:56,529][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'munk', 'manx', 'fradette', 'geddy']
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7fe91b3308b0>
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 01:59:56,530][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7fe91b341ca0>
+[2020-03-06 01:59:56,530][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus munk manx fradette geddy
+[2020-03-06 01:59:56,723][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:56,906][milner][DEBUG ] connected to host: milner 
+[2020-03-06 01:59:57,536][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 01:59:58,162][zod][DEBUG ] connected to host: zod 
+[2020-03-06 02:00:01,134][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:04,070][adam][DEBUG ] connected to host: adam 
+[2020-03-06 02:00:05,274][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:06,392][janus][DEBUG ] connected to host: janus 
+[2020-03-06 02:00:07,878][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:09,338][munk][DEBUG ] connected to host: munk 
+[2020-03-06 02:00:09,978][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:10,545][manx][DEBUG ] connected to host: manx 
+[2020-03-06 02:00:11,579][fradette][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:12,328][fradette][DEBUG ] connected to host: fradette 
+[2020-03-06 02:00:12,738][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:13,115][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 02:00:13,164][ceph_deploy.install][ERROR ] Ceph is still installed on: ['fradette']
+[2020-03-06 02:00:13,164][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2020-03-06 02:00:29,575][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purge milner zod adam janus manx fradette geddy munk
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 02:00:29,575][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'manx', 'fradette', 'geddy', 'munk']
+[2020-03-06 02:00:29,576][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7f4b6dac2130>
+[2020-03-06 02:00:29,576][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 02:00:29,576][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7f4b6dad3c10>
+[2020-03-06 02:00:29,576][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2020-03-06 02:00:29,576][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2020-03-06 02:00:29,576][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts milner zod adam janus manx fradette geddy munk
+[2020-03-06 02:00:29,576][ceph_deploy.install][DEBUG ] Detecting platform for host milner ...
+[2020-03-06 02:00:29,767][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:29,908][milner][DEBUG ] connected to host: milner 
+[2020-03-06 02:00:29,928][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:00:29,929][milner][INFO  ] Purging Ceph on milner
+[2020-03-06 02:00:29,930][milner][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:00:29,989][milner][DEBUG ] Reading package lists...
+[2020-03-06 02:00:30,098][milner][DEBUG ] Building dependency tree...
+[2020-03-06 02:00:30,099][milner][DEBUG ] Reading state information...
+[2020-03-06 02:00:30,227][milner][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:00:30,228][milner][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:00:30,228][milner][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:00:30,228][milner][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 02:00:30,228][milner][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 02:00:30,228][milner][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:00:30,228][milner][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 02:00:30,228][ceph_deploy.install][DEBUG ] Detecting platform for host zod ...
+[2020-03-06 02:00:30,824][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:31,429][zod][DEBUG ] connected to host: zod 
+[2020-03-06 02:00:31,460][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:00:31,461][zod][INFO  ] Purging Ceph on zod
+[2020-03-06 02:00:31,463][zod][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:00:31,538][zod][DEBUG ] Reading package lists...
+[2020-03-06 02:00:31,721][zod][DEBUG ] Building dependency tree...
+[2020-03-06 02:00:31,721][zod][DEBUG ] Reading state information...
+[2020-03-06 02:00:31,942][zod][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:00:31,943][zod][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:00:31,943][zod][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 02:00:31,943][zod][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 02:00:31,943][zod][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:00:31,943][zod][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 02:00:31,943][zod][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 02:00:31,943][zod][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 02:00:31,943][zod][DEBUG ]   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery-ui liblapack3 liblcms2-2
+[2020-03-06 02:00:31,943][zod][DEBUG ]   libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0 libnl-route-3-200 liboath0
+[2020-03-06 02:00:31,943][zod][DEBUG ]   librabbitmq4 librados2 libradosstriper1 librbd1 librdkafka1 librdmacm1
+[2020-03-06 02:00:31,944][zod][DEBUG ]   librgw2 libsnappy1v5 libtcmalloc-minimal4 libtiff5 liburcu6 libwebp6
+[2020-03-06 02:00:31,944][zod][DEBUG ]   libwebpdemux2 libwebpmux3 python-attr python-matplotlib-data
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 02:00:31,944][zod][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 02:00:31,971][zod][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 02:00:31,972][zod][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:00:31,972][zod][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 02:00:31,972][ceph_deploy.install][DEBUG ] Detecting platform for host adam ...
+[2020-03-06 02:00:34,911][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:37,844][adam][DEBUG ] connected to host: adam 
+[2020-03-06 02:00:37,978][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:00:37,978][adam][INFO  ] Purging Ceph on adam
+[2020-03-06 02:00:37,985][adam][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:00:38,293][adam][DEBUG ] Reading package lists...
+[2020-03-06 02:00:38,862][adam][DEBUG ] Building dependency tree...
+[2020-03-06 02:00:38,865][adam][DEBUG ] Reading state information...
+[2020-03-06 02:00:39,888][adam][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:00:39,889][adam][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:00:39,889][adam][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 02:00:39,890][adam][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 02:00:39,890][adam][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:00:39,891][adam][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 02:00:39,891][adam][DEBUG ]   ceph-fuse cephadm fonts-lyx ibverbs-providers libaio1 libbabeltrace1
+[2020-03-06 02:00:39,893][adam][DEBUG ]   libblas3 libcephfs2 libdw1 libgfortran4 libgoogle-perftools4 libibverbs1
+[2020-03-06 02:00:39,893][adam][DEBUG ]   libjs-jquery-ui liblapack3 libleveldb1v5 liblttng-ust-ctl4 liblttng-ust0
+[2020-03-06 02:00:39,894][adam][DEBUG ]   libnl-route-3-200 liboath0 libopts25 librabbitmq4 librados2 libradosstriper1
+[2020-03-06 02:00:39,894][adam][DEBUG ]   librbd1 librdkafka1 librdmacm1 librgw2 libsnappy1v5 libtcmalloc-minimal4
+[2020-03-06 02:00:39,895][adam][DEBUG ]   liburcu6 ntp python-attr python-funcsigs python-matplotlib-data
+[2020-03-06 02:00:40,033][adam][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 02:00:40,033][adam][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:00:40,033][adam][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 02:00:40,034][adam][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 02:00:40,034][adam][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 02:00:40,034][adam][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 02:00:40,035][adam][DEBUG ]   python3-webob python3-webtest python3-werkzeug sntp
+[2020-03-06 02:00:40,036][adam][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 02:00:40,036][adam][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 02:00:40,036][ceph_deploy.install][DEBUG ] Detecting platform for host janus ...
+[2020-03-06 02:00:41,362][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:42,468][janus][DEBUG ] connected to host: janus 
+[2020-03-06 02:00:42,515][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:00:42,515][janus][INFO  ] Purging Ceph on janus
+[2020-03-06 02:00:42,517][janus][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:00:43,056][janus][DEBUG ] Reading package lists...
+[2020-03-06 02:00:43,401][janus][DEBUG ] Building dependency tree...
+[2020-03-06 02:00:43,405][janus][DEBUG ] Reading state information...
+[2020-03-06 02:00:43,986][janus][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:00:43,988][janus][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:00:43,988][janus][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:00:43,988][janus][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 02:00:43,988][janus][DEBUG ]   cephadm fonts-lyx libaio1 libbabeltrace1 libblas3 libcephfs2 libdw1
+[2020-03-06 02:00:43,989][janus][DEBUG ]   libgfortran4 libgoogle-perftools4 libjs-jquery-ui liblapack3 libleveldb1v5
+[2020-03-06 02:00:43,989][janus][DEBUG ]   liboath0 librabbitmq4 libradosstriper1 librbd1 librdkafka1 librgw2
+[2020-03-06 02:00:43,990][janus][DEBUG ]   libsnappy1v5 libtcmalloc-minimal4 python-attr python-matplotlib-data
+[2020-03-06 02:00:43,990][janus][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 02:00:43,990][janus][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 02:00:43,990][janus][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 02:00:43,991][janus][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 02:00:43,992][janus][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 02:00:43,992][janus][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 02:00:43,992][janus][DEBUG ]   python3-tz python3-uritemplate python3-waitress python3-webencodings
+[2020-03-06 02:00:43,993][janus][DEBUG ]   python3-webob python3-webtest python3-werkzeug
+[2020-03-06 02:00:43,993][janus][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 02:00:44,064][janus][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 02:00:44,067][janus][DEBUG ]   ceph-common* ceph-mds*
+[2020-03-06 02:00:44,644][janus][DEBUG ] 0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
+[2020-03-06 02:00:44,778][janus][DEBUG ] After this operation, 0 B of additional disk space will be used.
+[2020-03-06 02:00:45,152][janus][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 162156 files and directories currently installed.)
+[2020-03-06 02:00:45,174][janus][DEBUG ] Purging configuration files for ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 02:00:46,792][janus][DEBUG ] Purging configuration files for ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 02:00:48,403][janus][DEBUG ] Purging configuration files for ceph-base (15.1.0-1bionic) ...
+[2020-03-06 02:00:49,969][janus][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-osd' not empty so not removed
+[2020-03-06 02:00:49,969][janus][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mgr' not empty so not removed
+[2020-03-06 02:00:50,024][janus][DEBUG ] Purging configuration files for ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 02:00:51,546][janus][DEBUG ] dpkg: warning: while removing ceph-mgr, directory '/var/lib/ceph/mgr' not empty so not removed
+[2020-03-06 02:00:51,611][janus][DEBUG ] Purging configuration files for ceph-common (15.1.0-1bionic) ...
+[2020-03-06 02:00:53,257][janus][DEBUG ] Processing triggers for systemd (237-3ubuntu10.39) ...
+[2020-03-06 02:00:53,736][janus][DEBUG ] Processing triggers for ureadahead (0.100.0-21) ...
+[2020-03-06 02:00:56,042][janus][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:00:56,050][ceph_deploy.install][DEBUG ] Detecting platform for host manx ...
+[2020-03-06 02:00:56,628][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:57,202][manx][DEBUG ] connected to host: manx 
+[2020-03-06 02:00:57,226][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:00:57,226][manx][INFO  ] Purging Ceph on manx
+[2020-03-06 02:00:57,227][manx][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:00:57,285][manx][DEBUG ] Reading package lists...
+[2020-03-06 02:00:57,416][manx][DEBUG ] Building dependency tree...
+[2020-03-06 02:00:57,417][manx][DEBUG ] Reading state information...
+[2020-03-06 02:00:57,558][manx][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:00:57,558][manx][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:00:57,558][manx][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 02:00:57,558][manx][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 02:00:57,558][manx][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:00:57,559][manx][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 02:00:57,559][manx][DEBUG ]   cephadm daemon fonts-lyx libblas3 libcephfs2 libgfortran4
+[2020-03-06 02:00:57,559][manx][DEBUG ]   libgoogle-perftools4 libjs-jquery-ui liblapack3 libleveldb1v5 libntirpc1
+[2020-03-06 02:00:57,559][manx][DEBUG ]   liboath0 librabbitmq4 libradosstriper1 librbd1 librdkafka1 librgw2
+[2020-03-06 02:00:57,559][manx][DEBUG ]   libtcmalloc-minimal4 libwbclient0 python-attr python-matplotlib-data
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python-pastedeploy-tpl python-pluggy python-py python-pytest python3-bcrypt
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-bs4 python3-ceph-argparse python3-ceph-common python3-cephfs
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-cherrypy3 python3-cycler python3-decorator python3-fasteners
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-html5lib python3-joblib python3-kubernetes python3-logutils
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-lxml python3-mako python3-matplotlib python3-monotonic python3-nose
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-numpy python3-oauth2client python3-olefile python3-paste
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-pastedeploy python3-pastescript python3-pecan python3-pil
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-pluggy python3-prettytable python3-py python3-pyinotify
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-pyparsing python3-pytest python3-rados python3-rbd
+[2020-03-06 02:00:57,559][manx][DEBUG ]   python3-repoze.lru python3-rgw python3-routes python3-rsa python3-scipy
+[2020-03-06 02:00:57,560][manx][DEBUG ]   python3-simplegeneric python3-simplejson python3-singledispatch
+[2020-03-06 02:00:57,560][manx][DEBUG ]   python3-sklearn python3-sklearn-lib python3-sqlalchemy python3-tempita
+[2020-03-06 02:00:57,560][manx][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 02:00:57,560][manx][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 02:00:57,579][manx][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 02:00:57,579][manx][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:00:57,579][manx][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 02:00:57,580][ceph_deploy.install][DEBUG ] Detecting platform for host fradette ...
+[2020-03-06 02:00:58,372][fradette][DEBUG ] connection detected need for sudo
+[2020-03-06 02:00:59,068][fradette][DEBUG ] connected to host: fradette 
+[2020-03-06 02:00:59,106][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:00:59,106][fradette][INFO  ] Purging Ceph on fradette
+[2020-03-06 02:00:59,109][fradette][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:00:59,337][fradette][DEBUG ] Reading package lists...
+[2020-03-06 02:00:59,521][fradette][DEBUG ] Building dependency tree...
+[2020-03-06 02:00:59,524][fradette][DEBUG ] Reading state information...
+[2020-03-06 02:00:59,781][fradette][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:00:59,782][fradette][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:00:59,782][fradette][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 02:00:59,782][fradette][DEBUG ]   cephadm fonts-lyx libbabeltrace1 libcephfs2 libdw1 libgoogle-perftools4
+[2020-03-06 02:00:59,782][fradette][DEBUG ]   libjs-jquery-ui libleveldb1v5 liboath0 librabbitmq4 libradosstriper1 librbd1
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   librdkafka1 librgw2 libsnappy1v5 libtcmalloc-minimal4 python-attr
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python-matplotlib-data python-pastedeploy-tpl python-pluggy python-py
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python-pytest python3-bcrypt python3-bs4 python3-ceph-argparse
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python3-ceph-common python3-cephfs python3-cherrypy3 python3-cycler
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python3-decorator python3-fasteners python3-html5lib python3-joblib
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python3-kubernetes python3-logutils python3-lxml python3-mako
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python3-matplotlib python3-monotonic python3-nose python3-numpy
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python3-oauth2client python3-olefile python3-paste python3-pastedeploy
+[2020-03-06 02:00:59,783][fradette][DEBUG ]   python3-pastescript python3-pecan python3-pil python3-pluggy
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-prettytable python3-py python3-pyinotify python3-pyparsing
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-pytest python3-rados python3-rbd python3-repoze.lru python3-rgw
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-routes python3-rsa python3-scipy python3-simplegeneric
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-simplejson python3-singledispatch python3-sklearn
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-sklearn-lib python3-sqlalchemy python3-tempita python3-tz
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 02:00:59,784][fradette][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 02:01:00,101][fradette][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 02:01:00,101][fradette][DEBUG ] The following packages will be REMOVED:
+[2020-03-06 02:01:00,103][fradette][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mgr-cephadm*
+[2020-03-06 02:01:00,104][fradette][DEBUG ]   ceph-mgr-dashboard* ceph-mgr-diskprediction-cloud*
+[2020-03-06 02:01:00,104][fradette][DEBUG ]   ceph-mgr-diskprediction-local* ceph-mgr-k8sevents* ceph-mgr-rook* ceph-mon*
+[2020-03-06 02:01:00,104][fradette][DEBUG ]   ceph-osd*
+[2020-03-06 02:01:00,554][fradette][DEBUG ] 0 upgraded, 0 newly installed, 13 to remove and 0 not upgraded.
+[2020-03-06 02:01:00,611][fradette][DEBUG ] After this operation, 337 MB disk space will be freed.
+[2020-03-06 02:01:01,103][fradette][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 169234 files and directories currently installed.)
+[2020-03-06 02:01:01,109][fradette][DEBUG ] Removing ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 02:01:02,155][fradette][DEBUG ] Removing ceph (15.1.0-1bionic) ...
+[2020-03-06 02:01:02,373][fradette][DEBUG ] Removing ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 02:01:03,272][fradette][DEBUG ] Removing ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 02:01:04,339][fradette][DEBUG ] Removing ceph-mgr-rook (15.1.0-1bionic) ...
+[2020-03-06 02:01:04,543][fradette][DEBUG ] Removing ceph-mgr-k8sevents (15.1.0-1bionic) ...
+[2020-03-06 02:01:04,747][fradette][DEBUG ] Removing ceph-mgr-cephadm (15.1.0-1bionic) ...
+[2020-03-06 02:01:04,932][fradette][DEBUG ] Removing ceph-mgr-dashboard (15.1.0-1bionic) ...
+[2020-03-06 02:01:05,131][fradette][DEBUG ] Removing ceph-mgr-diskprediction-cloud (15.1.0-1bionic) ...
+[2020-03-06 02:01:05,302][fradette][DEBUG ] Removing ceph-mgr-diskprediction-local (15.1.0-1bionic) ...
+[2020-03-06 02:01:05,502][fradette][DEBUG ] Removing ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 02:01:06,434][fradette][DEBUG ] Removing ceph-base (15.1.0-1bionic) ...
+[2020-03-06 02:01:07,502][fradette][DEBUG ] Removing ceph-common (15.1.0-1bionic) ...
+[2020-03-06 02:01:08,187][fradette][DEBUG ] Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+[2020-03-06 02:01:08,693][fradette][DEBUG ] Processing triggers for libc-bin (2.27-3ubuntu1) ...
+[2020-03-06 02:01:09,027][fradette][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 167286 files and directories currently installed.)
+[2020-03-06 02:01:09,033][fradette][DEBUG ] Purging configuration files for ceph-osd (15.1.0-1bionic) ...
+[2020-03-06 02:01:10,018][fradette][DEBUG ] Purging configuration files for ceph-mds (15.1.0-1bionic) ...
+[2020-03-06 02:01:10,915][fradette][DEBUG ] dpkg: warning: while removing ceph-mds, directory '/var/lib/ceph/mds' not empty so not removed
+[2020-03-06 02:01:11,000][fradette][DEBUG ] Purging configuration files for ceph-mon (15.1.0-1bionic) ...
+[2020-03-06 02:01:11,802][fradette][DEBUG ] dpkg: warning: while removing ceph-mon, directory '/var/lib/ceph/mon' not empty so not removed
+[2020-03-06 02:01:11,871][fradette][DEBUG ] Purging configuration files for ceph-base (15.1.0-1bionic) ...
+[2020-03-06 02:01:12,739][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/tmp' not empty so not removed
+[2020-03-06 02:01:12,808][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rgw' not empty so not removed
+[2020-03-06 02:01:12,808][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rbd-mirror' not empty so not removed
+[2020-03-06 02:01:12,808][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-rbd' not empty so not removed
+[2020-03-06 02:01:12,808][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-osd' not empty so not removed
+[2020-03-06 02:01:12,808][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mgr' not empty so not removed
+[2020-03-06 02:01:12,809][fradette][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/bootstrap-mds' not empty so not removed
+[2020-03-06 02:01:12,809][fradette][DEBUG ] Purging configuration files for ceph-mgr (15.1.0-1bionic) ...
+[2020-03-06 02:01:13,624][fradette][DEBUG ] dpkg: warning: while removing ceph-mgr, directory '/var/lib/ceph/mgr' not empty so not removed
+[2020-03-06 02:01:13,704][fradette][DEBUG ] Purging configuration files for ceph-common (15.1.0-1bionic) ...
+[2020-03-06 02:01:14,806][fradette][DEBUG ] Processing triggers for systemd (237-3ubuntu10.39) ...
+[2020-03-06 02:01:15,198][fradette][DEBUG ] Processing triggers for ureadahead (0.100.0-21) ...
+[2020-03-06 02:01:15,206][fradette][DEBUG ] ureadahead will be reprofiled on next reboot
+[2020-03-06 02:01:16,653][fradette][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:01:16,653][ceph_deploy.install][DEBUG ] Detecting platform for host geddy ...
+[2020-03-06 02:01:17,024][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:17,402][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 02:01:17,448][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:17,448][geddy][INFO  ] Purging Ceph on geddy
+[2020-03-06 02:01:17,450][geddy][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:01:17,556][geddy][DEBUG ] Reading package lists...
+[2020-03-06 02:01:17,862][geddy][DEBUG ] Building dependency tree...
+[2020-03-06 02:01:17,862][geddy][DEBUG ] Reading state information...
+[2020-03-06 02:01:18,458][geddy][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:01:18,458][geddy][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:01:18,469][geddy][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:01:18,469][geddy][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 02:01:18,469][geddy][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 02:01:18,469][geddy][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:01:18,469][geddy][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 02:01:18,470][ceph_deploy.install][DEBUG ] Detecting platform for host munk ...
+[2020-03-06 02:01:19,904][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:21,356][munk][DEBUG ] connected to host: munk 
+[2020-03-06 02:01:21,423][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:21,423][munk][INFO  ] Purging Ceph on munk
+[2020-03-06 02:01:21,426][munk][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2020-03-06 02:01:21,593][munk][DEBUG ] Reading package lists...
+[2020-03-06 02:01:21,897][munk][DEBUG ] Building dependency tree...
+[2020-03-06 02:01:21,899][munk][DEBUG ] Reading state information...
+[2020-03-06 02:01:22,473][munk][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2020-03-06 02:01:22,474][munk][DEBUG ] Package 'ceph' is not installed, so not removed
+[2020-03-06 02:01:22,474][munk][DEBUG ] Package 'ceph-common' is not installed, so not removed
+[2020-03-06 02:01:22,474][munk][DEBUG ] Package 'ceph-mds' is not installed, so not removed
+[2020-03-06 02:01:22,475][munk][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2020-03-06 02:01:22,475][munk][DEBUG ] The following packages were automatically installed and are no longer required:
+[2020-03-06 02:01:22,475][munk][DEBUG ]   cephadm fonts-lyx libaio1 libbabeltrace1 libblas3 libcephfs2 libdw1
+[2020-03-06 02:01:22,475][munk][DEBUG ]   libgfortran4 libgoogle-perftools4 libjbig0 libjpeg-turbo8 libjpeg8
+[2020-03-06 02:01:22,475][munk][DEBUG ]   libjs-jquery-ui liblapack3 liblcms2-2 libleveldb1v5 liboath0 librabbitmq4
+[2020-03-06 02:01:22,475][munk][DEBUG ]   libradosstriper1 librbd1 librdkafka1 librgw2 libsnappy1v5
+[2020-03-06 02:01:22,476][munk][DEBUG ]   libtcmalloc-minimal4 libtiff5 libwebp6 libwebpdemux2 libwebpmux3 python-attr
+[2020-03-06 02:01:22,476][munk][DEBUG ]   python-matplotlib-data python-pastedeploy-tpl python-pluggy python-py
+[2020-03-06 02:01:22,477][munk][DEBUG ]   python-pytest python3-bcrypt python3-bs4 python3-ceph-argparse
+[2020-03-06 02:01:22,477][munk][DEBUG ]   python3-ceph-common python3-cephfs python3-cherrypy3 python3-cycler
+[2020-03-06 02:01:22,477][munk][DEBUG ]   python3-dateutil python3-decorator python3-fasteners python3-html5lib
+[2020-03-06 02:01:22,477][munk][DEBUG ]   python3-joblib python3-kubernetes python3-logutils python3-lxml python3-mako
+[2020-03-06 02:01:22,477][munk][DEBUG ]   python3-matplotlib python3-monotonic python3-nose python3-numpy
+[2020-03-06 02:01:22,554][munk][DEBUG ]   python3-oauth2client python3-olefile python3-paste python3-pastedeploy
+[2020-03-06 02:01:22,554][munk][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2020-03-06 02:01:22,554][munk][DEBUG ]   python3-pastescript python3-pecan python3-pil python3-pluggy
+[2020-03-06 02:01:22,554][munk][DEBUG ]   python3-prettytable python3-py python3-pyinotify python3-pyparsing
+[2020-03-06 02:01:22,555][munk][DEBUG ]   python3-pytest python3-rados python3-rbd python3-repoze.lru python3-rgw
+[2020-03-06 02:01:22,555][munk][DEBUG ]   python3-routes python3-rsa python3-scipy python3-simplegeneric
+[2020-03-06 02:01:22,555][munk][DEBUG ]   python3-simplejson python3-singledispatch python3-sklearn
+[2020-03-06 02:01:22,555][munk][DEBUG ]   python3-sklearn-lib python3-sqlalchemy python3-tempita python3-tz
+[2020-03-06 02:01:22,555][munk][DEBUG ]   python3-uritemplate python3-waitress python3-webencodings python3-webob
+[2020-03-06 02:01:22,555][munk][DEBUG ]   python3-webtest python3-werkzeug
+[2020-03-06 02:01:22,555][munk][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2020-03-06 02:01:22,555][munk][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2020-03-06 02:01:22,877][ceph_deploy.conf][DEBUG ] found configuration file at: /home/cirfis/.cephdeploy.conf
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ] Invoked (2.0.2): /usr/bin/ceph-deploy purgedata milner zod adam janus munk manx fradette geddy
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  username                      : None
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  host                          : ['milner', 'zod', 'adam', 'janus', 'munk', 'manx', 'fradette', 'geddy']
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf object at 0x7efdc249a910>
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  default_release               : False
+[2020-03-06 02:01:22,878][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7efdc24abca0>
+[2020-03-06 02:01:22,878][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts milner zod adam janus munk manx fradette geddy
+[2020-03-06 02:01:23,070][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:23,253][milner][DEBUG ] connected to host: milner 
+[2020-03-06 02:01:23,906][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:24,501][zod][DEBUG ] connected to host: zod 
+[2020-03-06 02:01:27,405][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:30,390][adam][DEBUG ] connected to host: adam 
+[2020-03-06 02:01:31,853][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:32,966][janus][DEBUG ] connected to host: janus 
+[2020-03-06 02:01:34,456][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:35,891][munk][DEBUG ] connected to host: munk 
+[2020-03-06 02:01:36,525][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:37,091][manx][DEBUG ] connected to host: manx 
+[2020-03-06 02:01:38,066][fradette][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:38,776][fradette][DEBUG ] connected to host: fradette 
+[2020-03-06 02:01:39,184][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:39,573][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 02:01:39,853][milner][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:39,995][milner][DEBUG ] connected to host: milner 
+[2020-03-06 02:01:40,019][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:40,019][milner][INFO  ] purging data on milner
+[2020-03-06 02:01:40,020][milner][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:40,032][milner][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:40,653][zod][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:41,273][zod][DEBUG ] connected to host: zod 
+[2020-03-06 02:01:41,305][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:41,305][zod][INFO  ] purging data on zod
+[2020-03-06 02:01:41,308][zod][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:41,320][zod][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:44,266][adam][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:47,245][adam][DEBUG ] connected to host: adam 
+[2020-03-06 02:01:47,380][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:47,380][adam][INFO  ] purging data on adam
+[2020-03-06 02:01:47,385][adam][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:47,410][adam][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:48,514][janus][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:49,636][janus][DEBUG ] connected to host: janus 
+[2020-03-06 02:01:49,684][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:49,684][janus][INFO  ] purging data on janus
+[2020-03-06 02:01:49,686][janus][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:49,699][janus][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:51,153][munk][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:52,612][munk][DEBUG ] connected to host: munk 
+[2020-03-06 02:01:52,677][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:52,678][munk][INFO  ] purging data on munk
+[2020-03-06 02:01:52,681][munk][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:52,696][munk][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:53,282][manx][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:53,852][manx][DEBUG ] connected to host: manx 
+[2020-03-06 02:01:53,876][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:53,876][manx][INFO  ] purging data on manx
+[2020-03-06 02:01:53,878][manx][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:53,886][manx][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:54,658][fradette][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:55,360][fradette][DEBUG ] connected to host: fradette 
+[2020-03-06 02:01:55,396][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:55,396][fradette][INFO  ] purging data on fradette
+[2020-03-06 02:01:55,399][fradette][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:55,410][fradette][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2020-03-06 02:01:55,791][geddy][DEBUG ] connection detected need for sudo
+[2020-03-06 02:01:56,168][geddy][DEBUG ] connected to host: geddy 
+[2020-03-06 02:01:56,214][ceph_deploy.install][INFO  ] Distro info: Ubuntu 18.04 bionic
+[2020-03-06 02:01:56,214][geddy][INFO  ] purging data on geddy
+[2020-03-06 02:01:56,216][geddy][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2020-03-06 02:01:56,226][geddy][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
